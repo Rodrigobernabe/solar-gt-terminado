@@ -144,6 +144,10 @@
         }
 
         /* Clases de Utilidad */
+        html {
+            scroll-behavior: smooth;
+        }
+
         .container {
             width: 90%;
             max-width: var(--container-width);
@@ -335,7 +339,7 @@
 
         /* 
         ========================================
-        SECCIÓN HÉROE
+        SECCIÓN HERO
         ======================================== 
         */
         .hero {
@@ -345,7 +349,7 @@
             display: flex;
             align-items: center;
             color: #ffffff;
-            /* Siempre texto blanco en el héroe */
+            /* Siempre texto blanco en el hero */
             overflow: hidden;
         }
 
@@ -1215,9 +1219,42 @@
         }
 
         .underline-accent {
-            border-bottom: 3px solid var(--color-accent);
+            border-bottom: 3px solid var(--color-primary);
             display: inline-block;
             padding-bottom: 5px;
+        }
+
+        /* Nuevas Animaciones */
+        .slide-in-top {
+            opacity: 0;
+            transform: translateY(-50px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+
+        .slide-in-bottom {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+
+        .slide-in-left {
+            opacity: 0;
+            transform: translateX(-50px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+
+        .slide-in-right {
+            opacity: 0;
+            transform: translateX(50px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+
+        .slide-in-top.visible,
+        .slide-in-bottom.visible,
+        .slide-in-left.visible,
+        .slide-in-right.visible {
+            opacity: 1;
+            transform: translate(0);
         }
     </style>
 
@@ -1530,37 +1567,37 @@
 
             <div class="values-grid">
                 <!-- Tarjeta 1: Experiencia -->
-                <article class="value-card fade-in" data-bg="bg-experience">
+                <article class="value-card slide-in-top" data-bg="bg-experience">
                     <h3>Experiencia Comprobada</h3>
                     <p>Más de 10 años liderando el mercado de energía solar con instalaciones exitosas.</p>
                 </article>
 
                 <!-- Tarjeta 2: Tecnología -->
-                <article class="value-card fade-in" data-bg="bg-tech">
+                <article class="value-card slide-in-top" data-bg="bg-tech">
                     <h3>Tecnología Avanzada</h3>
                     <p>Utilizamos paneles de última generación con máxima eficiencia energética.</p>
                 </article>
 
                 <!-- Tarjeta 3: Garantía -->
-                <article class="value-card fade-in" data-bg="bg-warranty">
+                <article class="value-card slide-in-top" data-bg="bg-warranty">
                     <h3>Garantía Total</h3>
                     <p>25 años de garantía en todos nuestros productos y servicios de instalación.</p>
                 </article>
 
                 <!-- Tarjeta 4: Ahorro -->
-                <article class="value-card fade-in" data-bg="bg-savings">
+                <article class="value-card slide-in-bottom" data-bg="bg-savings">
                     <h3>Ahorro Garantizado</h3>
                     <p>Reduce hasta un 80% en tu factura de electricidad desde el primer mes.</p>
                 </article>
 
                 <!-- Tarjeta 5: Instalación -->
-                <article class="value-card fade-in" data-bg="bg-install">
+                <article class="value-card slide-in-bottom" data-bg="bg-install">
                     <h3>Instalación Rápida</h3>
                     <p>Instalación profesional en menos de 48 horas sin interrumpir tu rutina diaria.</p>
                 </article>
 
                 <!-- Tarjeta 6: Soporte -->
-                <article class="value-card fade-in" data-bg="bg-support">
+                <article class="value-card slide-in-bottom" data-bg="bg-support">
                     <h3>Soporte 24/7</h3>
                     <p>Asistencia técnica disponible las 24 horas para resolver cualquier incidencia.</p>
                 </article>
@@ -1579,7 +1616,7 @@
             <div class="services-grid">
                 <!-- Servicio 1: Paneles Solares -->
                 <!-- Service 1: Paneles Solares -->
-                <article class="service-card service-panels fade-in">
+                <article class="service-card service-panels slide-in-left">
                     <h3 data-lang="serv_panels_title">Paneles Solares</h3>
                     <p data-lang="serv_panels_desc">Instalación de paneles fotovoltaicos de alta eficiencia para generar
                         energía limpia y reducir tu factura eléctrica hasta un 80%.</p>
@@ -1595,7 +1632,7 @@
 
                 <!-- Servicio 3: Bombeo Solar -->
                 <!-- Service 3: Bombeo Solar -->
-                <article class="service-card service-pumps fade-in">
+                <article class="service-card service-pumps slide-in-right">
                     <h3 data-lang="serv_pumps_title">Bombeo Solar</h3>
                     <p data-lang="serv_pumps_desc">Soluciones de bombeo de agua alimentadas por energía solar, ideales
                         para agricultura, ganadería y zonas rurales.</p>
@@ -1603,7 +1640,7 @@
 
                 <!-- Servicio 4: Almacenamiento -->
                 <!-- Service 4: Almacenamiento -->
-                <article class="service-card service-storage fade-in">
+                <article class="service-card service-storage slide-in-left">
                     <h3 data-lang="serv_storage_title">Almacenamiento de Energía</h3>
                     <p data-lang="serv_storage_desc">Baterías de litio de última generación para almacenar energía y
                         garantizar suministro continuo día y noche.</p>
@@ -1619,7 +1656,7 @@
 
                 <!-- Servicio 6: Asesoría -->
                 <!-- Service 6: Asesoría -->
-                <article class="service-card service-consulting fade-in">
+                <article class="service-card service-consulting slide-in-right">
                     <h3 data-lang="serv_consulting_title">Asesoría Energética</h3>
                     <p data-lang="serv_consulting_desc">Análisis personalizado de consumo y diseño de sistemas solares
                         adaptados a tus necesidades específicas.</p>
@@ -1883,7 +1920,7 @@
                 });
             }, observerOptions);
 
-            const fadeElements = document.querySelectorAll('.fade-in, .slide-out-left, .slide-out-right');
+            const fadeElements = document.querySelectorAll('.fade-in, .slide-out-left, .slide-out-right, .slide-in-top, .slide-in-bottom, .slide-in-left, .slide-in-right');
             fadeElements.forEach(el => observer.observe(el));
 
             // Efecto de Desplazamiento del Encabezado (Cambio de transparencia opcional)
