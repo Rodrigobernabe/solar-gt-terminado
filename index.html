@@ -349,6 +349,15 @@
             overflow: hidden;
         }
 
+        .video-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+        }
+
         .hero-video {
             position: absolute;
             top: 0;
@@ -356,7 +365,14 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
-            z-index: -2;
+            opacity: 0;
+            transition: opacity 1.5s ease-in-out;
+            /* Suave transición */
+        }
+
+        .hero-video.active {
+            opacity: 1;
+            z-index: 1;
         }
 
         .hero-overlay {
@@ -366,13 +382,15 @@
             width: 100%;
             height: 100%;
             background: linear-gradient(rgba(15, 23, 42, 0.5), rgba(29, 72, 137, 0.6));
-            z-index: -1;
+            z-index: 2;
         }
 
         .hero-content {
             max-width: 800px;
             margin: 0 auto;
             text-align: center;
+            position: relative;
+            z-index: 3;
         }
 
         .hero h1 {
@@ -1174,6 +1192,31 @@
             line-height: 1.6;
             font-size: 0.95rem;
         }
+
+        /* Animaciones para Sobre Nosotros */
+        .slide-out-left {
+            opacity: 0;
+            transform: translateX(50px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+
+        .slide-out-right {
+            opacity: 0;
+            transform: translateX(-50px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+
+        .slide-out-left.visible,
+        .slide-out-right.visible {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .underline-accent {
+            border-bottom: 3px solid var(--color-accent);
+            display: inline-block;
+            padding-bottom: 5px;
+        }
     </style>
 
     <!-- Structured Data for Local Business -->
@@ -1246,23 +1289,15 @@
 
     <!-- HÉROE (CARRUSEL) -->
     <section id="inicio" class="hero">
-        <div class="carousel">
-            <div class="carousel-track">
-                <!-- Diapositiva 1 -->
-                <div class="carousel-slide active"
-                    style="background-image: url('https://images.unsplash.com/photo-1509391366360-2e959784a276?q=80&w=2072&auto=format&fit=crop');">
-                </div>
-                <!-- Diapositiva 2 -->
-                <div class="carousel-slide"
-                    style="background-image: url('https://images.unsplash.com/photo-1613665813446-82a78c468a1d?q=80&w=2058&auto=format&fit=crop');">
-                </div>
-                <!-- Diapositiva 3 -->
-                <div class="carousel-slide"
-                    style="background-image: url('https://images.unsplash.com/photo-1548611716-ad02dbe2c499?q=80&w=2128&auto=format&fit=crop');">
-                </div>
-            </div>
-            <div class="hero-overlay"></div>
+        <div class="video-container">
+            <video id="hero-vid-1" class="hero-video active" autoplay muted playsinline>
+                <source src="hero-video-1.mp4" type="video/mp4">
+            </video>
+            <video id="hero-vid-2" class="hero-video" muted playsinline>
+                <source src="hero-video-2.mp4" type="video/mp4">
+            </video>
         </div>
+        <div class="hero-overlay"></div>
         <div class="container">
             <div class="hero-content fade-in">
                 <h1 data-lang="hero_title">Impulsar hoy la energía del futuro</h1>
@@ -1302,7 +1337,7 @@
     <section id="nosotros" class="section-padding about">
         <div class="container">
             <div class="about-grid" style="align-items: flex-start;">
-                <div class="about-text fade-in">
+                <div class="about-text slide-out-left">
                     <span class="section-tag">Sobre Nosotros</span>
                     <h2 class="section-title">Quiénes Somos</h2>
                     <p><strong>Solar GT</strong> es un equipo de profesionales especializados en energía que desarrolla
@@ -1324,8 +1359,9 @@
                                 región, reconocida por su calidad técnica, innovación y confiabilidad.</p>
                         </div>
 
-                        <h3 style="color: var(--color-primary); font-size: 1.25rem; margin-bottom: 1rem;">Nuestros
-                            Valores</h3>
+                        <h3 style="color: var(--color-primary); font-size: 1.25rem; margin-bottom: 1rem;">
+                            <span class="underline-accent">Nuestros Valores</span>
+                        </h3>
                         <ul class="values-list">
                             <li style="margin-bottom: 1rem;">
                                 <strong style="color: var(--color-accent);">Transparencia Operativa:</strong> Diseñamos
@@ -1345,7 +1381,7 @@
                         </ul>
                     </div>
                 </div>
-                <div class="about-image fade-in" style="min-height: 400px; height: 100%;">
+                <div class="about-image slide-out-right" style="min-height: 400px; height: 100%;">
                     <!-- Usando imagen de equipo subida -->
                     <img src="team.jpg" alt="Equipo de técnicos de Solar GT" loading="lazy"
                         style="width: 100%; height: 100%; object-fit: cover; border-radius: var(--border-radius);">
@@ -1786,6 +1822,29 @@
     <!-- JAVASCRIPT -->
     <script>
         document.addEventListener('DOMContentLoaded', () => {
+            // Video Sequence Logic
+            const vid1 = document.getElementById('hero-vid-1');
+            const vid2 = document.getElementById('hero-vid-2');
+
+            // Handle transition from Vid 1 to Vid 2
+            vid1.addEventListener('ended', () => {
+                vid2.currentTime = 0;
+                vid2.play();
+                vid1.classList.remove('active');
+                vid2.classList.add('active');
+            });
+
+            // Handle transition from Vid 2 back to Vid 1
+            vid2.addEventListener('ended', () => {
+                vid1.currentTime = 0;
+                vid1.play();
+                vid2.classList.remove('active');
+                vid1.classList.add('active');
+            });
+
+            // Ensure first video is playing
+            vid1.play().catch(e => console.log("Autoplay prevented:", e));
+
             // Alternar Menú Móvil
             const mobileToggle = document.querySelector('.mobile-toggle');
             const navLinks = document.querySelector('.nav-links');
@@ -1822,7 +1881,7 @@
                 });
             }, observerOptions);
 
-            const fadeElements = document.querySelectorAll('.fade-in');
+            const fadeElements = document.querySelectorAll('.fade-in, .slide-out-left, .slide-out-right');
             fadeElements.forEach(el => observer.observe(el));
 
             // Efecto de Desplazamiento del Encabezado (Cambio de transparencia opcional)
