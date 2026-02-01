@@ -1,0 +1,2040 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Solar GT - Soluciones integrales de energía solar fotovoltaica y térmica para entornos rurales, industriales y comerciales. Innovación y calidad certificada.">
+    <title>Solar GT | Impulsando la Energía del Futuro</title>
+
+    <!-- Google Fonts: Inter (Similar to Circular) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Favicon -->
+    <link rel="icon" href="logo-favicon.png" type="image/png">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://solargt.com/">
+    <meta property="og:title" content="Solar GT | Impulsando la Energía del Futuro">
+    <meta property="og:description"
+        content="Soluciones integrales de energía solar fotovoltaica y térmica para entornos rurales, industriales y comerciales.">
+    <meta property="og:image" content="https://solargt.com/logo.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://solargt.com/">
+    <meta property="twitter:title" content="Solar GT | Impulsando la Energía del Futuro">
+    <meta property="twitter:description"
+        content="Soluciones integrales de energía solar fotovoltaica y térmica para entornos rurales, industriales y comerciales.">
+    <meta property="twitter:image" content="https://solargt.com/logo.png">
+
+    <style>
+        /* 
+        ========================================
+        SISTEMA DE DISEÑO Y VARIABLES
+        ======================================== 
+        Decisión: Uso de Propiedades Personalizadas CSS para facilitar la personalización y consistencia.
+        */
+        :root {
+            /* Paleta - Modo Claro (Por defecto) */
+            --color-primary: #1d4889;
+            /* Azul */
+            --color-primary-light: #246192;
+            --color-accent: #cbb03b;
+            /* Orange */
+            --color-accent-hover: #b39b32;
+            --color-text: #1f2937;
+            --color-text-light: #6b7280;
+            --color-white: #ffffff;
+            --color-bg: #f9fafb;
+            --color-bg-alt: #f3f4f6;
+            --color-card-bg: #ffffff;
+            --color-border: #e5e7eb;
+
+            /* Espaciado */
+            --spacing-xs: 0.5rem;
+            --spacing-sm: 1rem;
+            --spacing-md: 2rem;
+            --spacing-lg: 4rem;
+            --spacing-xl: 6rem;
+
+            /* Tipografía */
+            --font-main: 'Inter', sans-serif;
+            --text-hero: clamp(2.5rem, 5vw, 4rem);
+            --text-h1: clamp(2rem, 4vw, 3rem);
+            --text-h2: clamp(1.5rem, 3vw, 2.25rem);
+            --text-h3: clamp(1.25rem, 2.5vw, 1.75rem);
+            --text-body: 1rem;
+
+            /* Diseño */
+            --container-width: 1200px;
+            --header-height: 80px;
+            --border-radius: 12px;
+            --border-radius-lg: 20px;
+
+            --border-radius-lg: 20px;
+
+            /* Botón Flotante */
+            --whatsapp-green: #25d366;
+            --whatsapp-dark: #128c7e;
+
+            /* Sombras */
+            --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+            --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+            --shadow-hover: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Tema Modo Oscuro */
+        [data-theme="dark"] {
+            --color-primary: #3b82f6;
+            /* Azul más claro para contraste en modo oscuro */
+            --color-primary-light: #60a5fa;
+            --color-text: #f9fafb;
+            --color-text-light: #d1d5db;
+            --color-white: #111827;
+            /* Invertido para fondos */
+            --color-bg: #0f172a;
+            /* Pizarra oscura */
+            --color-bg-alt: #1e293b;
+            --color-card-bg: #1f2937;
+            --color-border: #374151;
+            --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.5);
+            --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Reinicio y Estilos Base */
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--font-main);
+            background-color: var(--color-bg);
+            color: var(--color-text);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Clases de Utilidad */
+        .container {
+            width: 90%;
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 var(--spacing-sm);
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: none;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            font-size: 0.9rem;
+        }
+
+        .btn-primary {
+            background-color: var(--color-accent);
+            color: var(--color-primary);
+        }
+
+        .btn-primary:hover {
+            background-color: var(--color-accent-hover);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            border: 2px solid #ffffff;
+            color: #ffffff;
+        }
+
+        .btn-outline:hover {
+            background-color: #ffffff;
+            color: var(--color-primary);
+        }
+
+        .section-padding {
+            padding: var(--spacing-xl) 0;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .text-primary {
+            color: var(--color-primary);
+        }
+
+        .text-accent {
+            color: var(--color-accent);
+        }
+
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* 
+        ========================================
+        ENCABEZADO Y NAVEGACIÓN
+        ======================================== 
+        Decisión: Encabezado fijo para mejorar la accesibilidad de la navegación.
+        Efecto Glassmorphism para un toque moderno.
+        */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            box-shadow: var(--shadow-sm);
+            transition: all 0.3s ease;
+        }
+
+        [data-theme="dark"] header {
+            background: rgba(15, 23, 42, 0.95);
+            border-bottom: 1px solid var(--color-border);
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: var(--header-height);
+        }
+
+        .logo-img {
+            height: 50px;
+            width: auto;
+        }
+
+        .footer-logo-img {
+            height: 50px;
+            width: auto;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-link {
+            font-weight: 500;
+            color: var(--color-primary);
+            font-size: 0.95rem;
+            position: relative;
+            transition: color 0.3s;
+        }
+
+        [data-theme="dark"] .nav-link {
+            color: var(--color-text);
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -4px;
+            left: 0;
+            background-color: var(--color-accent);
+            transition: width 0.3s ease;
+        }
+
+        .nav-link:hover {
+            color: var(--color-primary-light);
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        .nav-actions {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-left: 2rem;
+        }
+
+        .icon-btn {
+            background: none;
+            border: none;
+            color: var(--color-primary);
+            cursor: pointer;
+            font-size: 1.2rem;
+            padding: 0.5rem;
+            border-radius: 50%;
+            transition: background 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        [data-theme="dark"] .icon-btn {
+            color: var(--color-text);
+        }
+
+        .icon-btn:hover {
+            background-color: var(--color-bg-alt);
+        }
+
+        .mobile-toggle {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+        }
+
+        .bar {
+            width: 25px;
+            height: 3px;
+            background-color: var(--color-primary);
+            transition: 0.3s;
+        }
+
+        /* 
+        ========================================
+        SECCIÓN HÉROE
+        ======================================== 
+        */
+        .hero {
+            height: 100vh;
+            min-height: 600px;
+            position: relative;
+            display: flex;
+            align-items: center;
+            color: #ffffff;
+            /* Siempre texto blanco en el héroe */
+            overflow: hidden;
+        }
+
+        .hero-video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -2;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(rgba(15, 23, 42, 0.5), rgba(29, 72, 137, 0.6));
+            z-index: -1;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: var(--text-hero);
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+            font-weight: 800;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            margin: 0 auto 2.5rem auto;
+            max-width: 600px;
+            opacity: 0.9;
+        }
+
+        .hero-btns {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        /* 
+        ========================================
+        SECCIÓN CONTADORES
+        ========================================
+        */
+        .counters {
+            background-color: var(--color-primary);
+            color: #ffffff;
+            padding: 3rem 0;
+            /* Adjusted padding */
+            margin-bottom: 3rem;
+            /* Add spacing between Hero Counters and About */
+        }
+
+        .counters-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            text-align: center;
+        }
+
+        .counter-item h3 {
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 0.5rem;
+            color: var(--color-accent);
+        }
+
+        .counter-item p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        /* 
+        ========================================
+        SECCIÓN NOSOTROS
+        ======================================== 
+        */
+        .about {
+            background-color: var(--color-bg);
+            overflow: hidden;
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .about-image {
+            position: relative;
+        }
+
+        .about-image img {
+            border-radius: var(--border-radius-lg);
+            box-shadow: var(--shadow-lg);
+            transition: transform 0.3s ease;
+        }
+
+        .about-image:hover img {
+            transform: scale(1.02);
+        }
+
+        .section-tag {
+            color: var(--color-accent);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 0.875rem;
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+
+        .section-title {
+            font-size: var(--text-h2);
+            color: var(--color-primary);
+            margin-bottom: 1.5rem;
+            font-weight: 700;
+        }
+
+        [data-theme="dark"] .section-title {
+            color: var(--color-text);
+        }
+
+        .about-text p {
+            margin-bottom: 1.5rem;
+            color: var(--color-text-light);
+        }
+
+        /* 
+        ========================================
+        SECCIÓN VALORES
+        ======================================== 
+        */
+        .values {
+            background-color: var(--color-bg-alt);
+        }
+
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .value-card {
+            background: var(--color-card-bg);
+            padding: 2.5rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-md);
+            transition: all 0.3s ease;
+            text-align: left;
+            border-bottom: 4px solid transparent;
+            border: 1px solid var(--color-border);
+        }
+
+        .value-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-hover);
+            border-bottom-color: var(--color-accent);
+        }
+
+        .value-icon {
+            font-size: 2.5rem;
+            color: var(--color-primary);
+            margin-bottom: 1.5rem;
+            background: rgba(29, 72, 137, 0.1);
+            width: 70px;
+            height: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+        }
+
+        [data-theme="dark"] .value-icon {
+            background: rgba(59, 130, 246, 0.1);
+            /* Primario más claro para modo oscuro */
+        }
+
+        .value-card h3 {
+            font-size: 1.25rem;
+            margin-bottom: 1rem;
+            color: var(--color-primary);
+        }
+
+        [data-theme="dark"] .value-card h3 {
+            color: var(--color-text);
+        }
+
+        /* 
+        ========================================
+        SECCIÓN SERVICIOS (CUADRÍCULA ACTUALIZADA)
+        ======================================== 
+        */
+        .services {
+            background-color: var(--color-bg);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-top: 3rem;
+        }
+
+        .service-card {
+            background-color: var(--color-card-bg);
+            border-radius: var(--border-radius);
+            padding: 2.5rem;
+            position: relative;
+            overflow: hidden;
+            border: 1px solid var(--color-border);
+            transition: all 0.4s ease;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            min-height: 280px;
+            z-index: 1;
+        }
+
+        /* Efecto de Revelación al Pasar el Mouse */
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-size: cover;
+            background-position: center;
+            opacity: 0;
+            transition: opacity 0.4s ease;
+            z-index: -1;
+        }
+
+        .service-card::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.4));
+            opacity: 0;
+            transition: opacity 0.4s ease;
+            z-index: -1;
+        }
+
+        .service-icon {
+            display: none;
+            /* Removed as requested */
+        }
+
+        .service-card:hover {
+            transform: scale(1.05);
+            /* Agrandar tarjeta completa */
+            color: #ffffff;
+            border-color: transparent;
+            z-index: 10;
+            /* Asegurar que flote por encima */
+            box-shadow: var(--shadow-lg);
+        }
+
+        .service-card:hover::before,
+        .service-card:hover::after {
+            opacity: 1;
+        }
+
+        /* Estilos del Carrusel */
+        .carousel {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -2;
+        }
+
+        .carousel-track {
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+
+        .carousel-slide {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            opacity: 0;
+            transition: opacity 1.5s ease-in-out;
+        }
+
+        .carousel-slide.active {
+            opacity: 1;
+        }
+
+        /* Transición de Fondo de Valores */
+        .values {
+            position: relative;
+            background: transparent;
+            z-index: 1;
+            /* Eliminar fondo por defecto para ver la capa de transición */
+        }
+
+        .values-bg-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            overflow: hidden;
+            background-color: var(--color-bg-alt);
+            /* Respaldo por defecto */
+        }
+
+        .values-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            opacity: 0;
+            transition: opacity 0.5s ease;
+        }
+
+        .values-bg.active {
+            opacity: 1;
+        }
+
+        .values-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(15, 23, 42, 0.85);
+            /* Superposición oscura para hacer el texto legible */
+            z-index: 1;
+        }
+
+        /* Actualizar Tarjeta de Valores para este nuevo diseño */
+        .values .value-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            color: #ffffff;
+        }
+
+        .values .value-card p {
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        .values .value-card h3 {
+            color: var(--color-accent);
+        }
+
+        .values .section-tag {
+            color: var(--color-accent);
+            z-index: 2;
+        }
+
+        .values .section-title {
+            color: #ffffff;
+            z-index: 2;
+        }
+
+        /* Imágenes de Fondo Específicas para Servicios */
+        .service-panels::before {
+            background-image: url('service_panels.png');
+        }
+
+        .service-heaters::before {
+            background-image: url('service_heaters.png');
+        }
+
+        .service-pumps::before {
+            background-image: url('service_pumps.png');
+        }
+
+        .service-storage::before {
+            background-image: url('https://images.unsplash.com/photo-1593941707882-a5bba14938c7?q=80&w=2072&auto=format&fit=crop');
+        }
+
+        .service-maintenance::before {
+            background-image: url('https://images.unsplash.com/photo-1545259741-2ea3ebf61fa3?q=80&w=2000&auto=format&fit=crop');
+        }
+
+        .service-consulting::before {
+            background-image: url('https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=2070&auto=format&fit=crop');
+        }
+
+        .service-icon {
+            width: 50px;
+            height: 50px;
+            background: rgba(29, 72, 137, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+            color: var(--color-primary);
+            font-size: 1.5rem;
+            transition: all 0.3s;
+        }
+
+        [data-theme="dark"] .service-icon {
+            background: rgba(59, 130, 246, 0.1);
+            color: var(--color-primary);
+        }
+
+        .service-card:hover .service-icon {
+            background: var(--color-accent);
+            color: #fff;
+        }
+
+        .service-card h3 {
+            font-size: 1.25rem;
+            margin-bottom: 1rem;
+            color: var(--color-primary);
+            transition: color 0.3s;
+        }
+
+        [data-theme="dark"] .service-card h3 {
+            color: var(--color-text);
+        }
+
+        .service-card:hover h3 {
+            color: var(--color-accent);
+        }
+
+        .service-card p {
+            color: var(--color-text-light);
+            font-size: 0.95rem;
+            transition: color 0.3s;
+        }
+
+        .service-card:hover p {
+            color: #d1d5db;
+        }
+
+        /* 
+        ========================================
+        SECCIÓN CONFIANZA
+        ======================================== 
+        */
+        .trust {
+            background: var(--color-primary);
+            color: var(--color-white);
+            text-align: center;
+        }
+
+        [data-theme="dark"] .trust {
+            background: var(--color-bg-alt);
+            color: var(--color-text);
+        }
+
+        .trust-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .cert-badges {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .badge {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        [data-theme="dark"] .badge {
+            background: var(--color-card-bg);
+            border-color: var(--color-border);
+            color: var(--color-text);
+        }
+
+        /* 
+        ========================================
+        PIE DE PÁGINA
+        ======================================== 
+        */
+        footer {
+            background-color: #111827;
+            color: #d1d5db;
+            padding-top: 4rem;
+            padding-bottom: 2rem;
+            font-size: 0.9rem;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-col h4 {
+            color: var(--color-white);
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 0.75rem;
+        }
+
+        .footer-col a:hover {
+            color: var(--color-accent);
+        }
+
+        .footer-link {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            color: var(--color-text-light);
+            text-decoration: none;
+            margin-bottom: 1rem;
+            font-size: 1rem;
+            transition: color 0.3s;
+        }
+
+        .footer-link:hover {
+            color: var(--color-accent);
+        }
+
+        .footer-link svg {
+            color: var(--color-accent);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid #374151;
+        }
+
+        /* 
+        ========================================
+        CONSULTAS DE MEDIOS RESPONSIVAS
+        ======================================== 
+        */
+        @media (max-width: 768px) {
+            .mobile-toggle {
+                display: flex;
+            }
+
+            .nav-links {
+                position: fixed;
+                top: var(--header-height);
+                left: 0;
+                width: 100%;
+                background: var(--color-white);
+                flex-direction: column;
+                padding: 2rem;
+                gap: 1.5rem;
+                transform: translateX(100%);
+                transition: transform 0.3s ease-in-out;
+                box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            }
+
+            [data-theme="dark"] .nav-links {
+                background: var(--color-bg);
+            }
+
+            .nav-links.active {
+                transform: translateX(0);
+            }
+
+            .about-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .about-image {
+                order: -1;
+                /* Imagen arriba en móvil */
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .team-carousel {
+                grid-auto-columns: 85%;
+                /* Tarjetas más grandes en móvil */
+            }
+        }
+
+        /* 
+        ========================================
+        SECCIÓN DE EQUIPO
+        ======================================== 
+        */
+        .team-carousel {
+            overflow: hidden;
+            /* Ocultar barra de desplazamiento */
+            padding-bottom: 2rem;
+            position: relative;
+            width: 100%;
+        }
+
+        .team-track {
+            display: flex;
+            gap: 2rem;
+            width: max-content;
+            animation: scroll 40s linear infinite;
+        }
+
+        .team-track:hover {
+            animation-play-state: paused;
+        }
+
+        @keyframes scroll {
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(-50%);
+            }
+
+            /* Mover a la mitad porque el contenido está duplicado */
+        }
+
+        .team-card {
+            background: var(--color-white);
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid var(--color-border);
+            width: 300px;
+            /* Ancho fijo para bucle suave */
+            flex-shrink: 0;
+        }
+
+
+
+        [data-theme="dark"] .team-card {
+            background: var(--color-card-bg);
+        }
+
+        .team-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .team-img {
+            height: 250px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .team-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .team-card:hover .team-img img {
+            transform: scale(1.05);
+            /* Zoom al pasar el mouse */
+        }
+
+        .team-info {
+            padding: 1.5rem;
+            text-align: center;
+        }
+
+        .team-info h3 {
+            font-size: 1.25rem;
+            margin-bottom: 0.25rem;
+            color: var(--color-primary);
+        }
+
+        [data-theme="dark"] .team-info h3 {
+            color: var(--color-text);
+        }
+
+        .team-info .role {
+            font-size: 0.9rem;
+            color: var(--color-accent);
+            font-weight: 600;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .team-info .desc {
+            font-size: 0.95rem;
+            color: var(--color-text-light);
+            line-height: 1.5;
+        }
+
+        /* Resaltado de Tarjeta 'Y Vos' */
+        .team-you {
+            border: 2px solid var(--color-accent);
+            background: rgba(var(--color-accent-rgb, 217, 119, 6), 0.05);
+            position: relative;
+        }
+
+        .team-you .team-info h3 {
+            font-weight: 800;
+            color: var(--color-accent);
+        }
+
+        .btn-link {
+            display: inline-block;
+            margin-top: 1rem;
+            color: var(--color-accent);
+            font-weight: 600;
+            text-decoration: none;
+        }
+
+        .btn-link:hover {
+            text-decoration: underline;
+        }
+
+        /* 
+        ========================================
+        SECCIÓN DE PREGUNTAS FRECUENTES
+        ======================================== 
+        */
+        .faq-grid {
+            max-width: 800px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        #faq {
+            background-color: var(--color-bg-alt);
+        }
+
+        .faq-item {
+            background: var(--color-white);
+            border: 1px solid var(--color-border);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        [data-theme="dark"] .faq-item {
+            background: var(--color-card-bg);
+        }
+
+        .faq-item:hover {
+            border-color: var(--color-primary);
+        }
+
+        .faq-question {
+            width: 100%;
+            padding: 1.25rem 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: none;
+            border: none;
+            text-align: left;
+            font-size: 1.05rem;
+            font-weight: 600;
+            color: var(--color-text);
+            cursor: pointer;
+            transition: color 0.3s;
+        }
+
+        .faq-question:hover {
+            color: var(--color-primary);
+        }
+
+        .faq-question .chevron {
+            transition: transform 0.3s ease;
+            color: var(--color-accent);
+            flex-shrink: 0;
+            margin-left: 1rem;
+        }
+
+        .faq-item.active .faq-question .chevron {
+            transform: rotate(180deg);
+        }
+
+        .faq-item.active .faq-question {
+            color: var(--color-primary);
+            background-color: rgba(var(--color-primary-rgb, 29, 72, 137), 0.03);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+            background-color: transparent;
+        }
+
+        .faq-content {
+            padding: 0 1.5rem 1.5rem 1.5rem;
+            color: var(--color-text-light);
+            line-height: 1.6;
+            font-size: 0.95rem;
+        }
+    </style>
+
+    <!-- Structured Data for Local Business -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Solar GT",
+      "image": "hero.png",
+      "description": "Soluciones de energía solar fotovoltaica y térmica para entornos rurales, industriales y comerciales.",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Argentina",
+        "addressCountry": "AR"
+      },
+      "priceRange": "$$$",
+      "openingHours": "Mo-Fr 08:00-18:00"
+    }
+    </script>
+</head>
+
+<body>
+
+    <!-- ENCABEZADO -->
+    <header id="header">
+        <div class="container navbar">
+            <a href="#" class="logo">
+                <img src="logo.png" alt="Solar GT" class="logo-img">
+            </a>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#inicio" class="nav-link" data-lang="nav_home">Inicio</a></li>
+                    <li><a href="#nosotros" class="nav-link" data-lang="nav_about">Nosotros</a></li>
+                    <li><a href="#valores" class="nav-link" data-lang="nav_values">Valores</a></li>
+                    <li><a href="#servicios" class="nav-link" data-lang="nav_services">Soluciones</a></li>
+                    <li><a href="#contacto" class="nav-link" data-lang="nav_contact">Contacto</a></li>
+                </ul>
+            </nav>
+
+            <div class="nav-actions">
+                <button id="theme-toggle" class="icon-btn" aria-label="Cambiar tema">
+                    <!-- Icono Sol -->
+                    <svg class="sun-icon" style="display:none;" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                    <!-- Icono Luna -->
+                    <svg class="moon-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                </button>
+                <button id="lang-toggle" class="icon-btn" style="font-size: 0.9rem; font-weight: 700;">EN</button>
+            </div>
+            <div class="mobile-toggle" aria-label="Abrir menú">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </header>
+
+    <!-- HÉROE (CARRUSEL) -->
+    <section id="inicio" class="hero">
+        <div class="carousel">
+            <div class="carousel-track">
+                <!-- Diapositiva 1 -->
+                <div class="carousel-slide active"
+                    style="background-image: url('https://images.unsplash.com/photo-1509391366360-2e959784a276?q=80&w=2072&auto=format&fit=crop');">
+                </div>
+                <!-- Diapositiva 2 -->
+                <div class="carousel-slide"
+                    style="background-image: url('https://images.unsplash.com/photo-1613665813446-82a78c468a1d?q=80&w=2058&auto=format&fit=crop');">
+                </div>
+                <!-- Diapositiva 3 -->
+                <div class="carousel-slide"
+                    style="background-image: url('https://images.unsplash.com/photo-1548611716-ad02dbe2c499?q=80&w=2128&auto=format&fit=crop');">
+                </div>
+            </div>
+            <div class="hero-overlay"></div>
+        </div>
+        <div class="container">
+            <div class="hero-content fade-in">
+                <h1 data-lang="hero_title">Impulsar hoy la energía del futuro</h1>
+                <p data-lang="hero_subtitle">Expertos en soluciones fotovoltaicas y térmicas de alto rendimiento para el
+                    campo, la industria y el comercio.</p>
+                <div class="hero-btns">
+                    <a href="#servicios" class="btn btn-primary" data-lang="hero_cta1">Ver Soluciones</a>
+                    <a href="#nosotros" class="btn btn-outline" data-lang="hero_cta2">Conocer Más</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTADORES -->
+    <section class="counters">
+        <div class="container counters-grid">
+            <div class="counter-item fade-in">
+                <h3 class="counter-value" data-target="10">0</h3>
+                <p data-lang="counter_years">Años de Experiencia</p>
+            </div>
+            <div class="counter-item fade-in">
+                <h3 class="counter-value" data-target="500">0</h3>
+                <p data-lang="counter_projects">Proyectos Completados</p>
+            </div>
+            <div class="counter-item fade-in">
+                <h3 class="counter-value" data-target="2000">0</h3>
+                <p data-lang="counter_mwh">MWh Generados</p>
+            </div>
+            <div class="counter-item fade-in">
+                <h3 class="counter-value" data-target="100">0</h3>
+                <p data-lang="counter_clients">Clientes Satisfechos</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SOBRE NOSOTROS -->
+    <section id="nosotros" class="section-padding about">
+        <div class="container">
+            <div class="about-grid" style="align-items: flex-start;">
+                <div class="about-text fade-in">
+                    <span class="section-tag">Sobre Nosotros</span>
+                    <h2 class="section-title">Quiénes Somos</h2>
+                    <p><strong>Solar GT</strong> es un equipo de profesionales especializados en energía que desarrolla
+                        soluciones solares innovadoras, pensadas para impulsar hoy la energía del futuro.</p>
+
+                    <div style="margin-top: 2rem;">
+                        <div style="margin-bottom: 1.5rem;">
+                            <h3 style="color: var(--color-primary); font-size: 1.25rem; margin-bottom: 0.5rem;">Misión
+                            </h3>
+                            <p style="font-size: 0.95rem;">Brindar soluciones integrales en energías solares
+                                fotovoltaicas y térmicas, adaptadas a entornos rurales y urbanos, contribuyendo a la
+                                eficiencia energética y al desarrollo sustentable.</p>
+                        </div>
+
+                        <div style="margin-bottom: 1.5rem;">
+                            <h3 style="color: var(--color-primary); font-size: 1.25rem; margin-bottom: 0.5rem;">Visión
+                            </h3>
+                            <p style="font-size: 0.95rem;">Ser una empresa referente en servicios de energía solar en la
+                                región, reconocida por su calidad técnica, innovación y confiabilidad.</p>
+                        </div>
+
+                        <h3 style="color: var(--color-primary); font-size: 1.25rem; margin-bottom: 1rem;">Nuestros
+                            Valores</h3>
+                        <ul class="values-list">
+                            <li style="margin-bottom: 1rem;">
+                                <strong style="color: var(--color-accent);">Transparencia Operativa:</strong> Diseñamos
+                                soluciones energéticas claras, viables y adaptadas a cada necesidad productiva.
+                                Asesoramos con información precisa y costos reales.
+                            </li>
+                            <li style="margin-bottom: 1rem;">
+                                <strong style="color: var(--color-accent);">Innovación Aplicada:</strong> Integramos
+                                tecnología solar de última generación y criterios de eficiencia energética para
+                                maximizar la rentabilidad.
+                            </li>
+                            <li>
+                                <strong style="color: var(--color-accent);">Calidad Certificada:</strong> Trabajamos con
+                                equipamiento homologado y procesos alineados a normativas vigentes, asegurando
+                                durabilidad y alto desempeño.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="about-image fade-in" style="min-height: 400px; height: 100%;">
+                    <!-- Usando imagen de equipo subida -->
+                    <img src="team.jpg" alt="Equipo de técnicos de Solar GT" loading="lazy"
+                        style="width: 100%; height: 100%; object-fit: cover; border-radius: var(--border-radius);">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN DE EQUIPO -->
+    <section id="equipo" class="section-padding team">
+        <div class="container">
+            <div class="text-center fade-in">
+                <span class="section-tag">Nuestro Equipo</span>
+                <h2 class="section-title">Quienes hacen posible el cambio</h2>
+            </div>
+
+            <div class="team-carousel">
+                <div class="team-track">
+                    <!-- Director General -->
+                    <div class="team-card fade-in">
+                        <div class="team-img">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=1000&auto=format&fit=crop"
+                                alt="Carlos Méndez">
+                        </div>
+                        <div class="team-info">
+                            <h3>Carlos Méndez</h3>
+                            <p class="role">Director General</p>
+                            <p class="desc">Visionario con 15 años de experiencia liderando proyectos de energía
+                                renovable
+                                en Latam.</p>
+                        </div>
+                    </div>
+
+                    <!-- Ingeniera -->
+                    <div class="team-card fade-in">
+                        <div class="team-img">
+                            <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?q=80&w=1000&auto=format&fit=crop"
+                                alt="Sofía López">
+                        </div>
+                        <div class="team-info">
+                            <h3>Ing. Sofía López</h3>
+                            <p class="role">Jefa de Ingeniería</p>
+                            <p class="desc">Especialista en diseño fotovoltaico y optimización de eficiencia energética
+                                industrial.</p>
+                        </div>
+                    </div>
+
+                    <!-- Técnico -->
+                    <div class="team-card fade-in">
+                        <div class="team-img">
+                            <img src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?q=80&w=1000&auto=format&fit=crop"
+                                alt="Juan Pérez">
+                        </div>
+                        <div class="team-info">
+                            <h3>Juan Pérez</h3>
+                            <p class="role">Supervisor Técnico</p>
+                            <p class="desc">Experto en instalaciones de campo y mantenimiento preventivo de alta
+                                tensión.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Ventas -->
+                    <div class="team-card fade-in">
+                        <div class="team-img">
+                            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=1000&auto=format&fit=crop"
+                                alt="Laura García">
+                        </div>
+                        <div class="team-info">
+                            <h3>Laura García</h3>
+                            <p class="role">Gerente de Ventas</p>
+                            <p class="desc">Apasionada por conectar empresas con soluciones que reducen costos y huella
+                                de
+                                carbono.</p>
+                        </div>
+                    </div>
+
+                    <!-- Soporte -->
+                    <div class="team-card fade-in">
+                        <div class="team-img">
+                            <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?q=80&w=1000&auto=format&fit=crop"
+                                alt="Martín Rodríguez">
+                        </div>
+                        <div class="team-info">
+                            <h3>Martín Rodríguez</h3>
+                            <p class="role">Soporte y Post-Venta</p>
+                            <p class="desc">Siempre disponible para garantizar que tu sistema funcione al 100% día tras
+                                día.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- VOS -->
+                    <div class="team-card fade-in team-you">
+                        <div class="team-img">
+                            <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=1000&auto=format&fit=crop"
+                                alt="¡Y vos!">
+                        </div>
+                        <div class="team-info">
+                            <h3>¡Y VOS!</h3>
+                            <p class="role">Futuro integrante</p>
+                            <p class="desc">El próximo caso de éxito. Uníte a la revolución solar y transformá tu
+                                energía
+                                hoy.</p>
+                            <a href="#contacto" class="btn-link">Empezar Ahora &rarr;</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- VALORES (POR QUÉ ELEGIRNOS) -->
+    <section id="valores" class="section-padding values">
+        <!-- Contenedor de Fondo Dinámico -->
+        <div class="values-bg-container">
+            <div class="values-bg active" id="bg-default"></div>
+            <div class="values-bg" id="bg-experience"
+                style="background-image: url('https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=2070&auto=format&fit=crop');">
+            </div>
+            <div class="values-bg" id="bg-tech"
+                style="background-image: url('https://images.unsplash.com/photo-1558449028-b53a39d100fc?q=80&w=2070&auto=format&fit=crop');">
+            </div>
+            <div class="values-bg" id="bg-warranty"
+                style="background-image: url('https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=1974&auto=format&fit=crop');">
+            </div>
+            <div class="values-bg" id="bg-savings"
+                style="background-image: url('https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?q=80&w=2071&auto=format&fit=crop');">
+            </div>
+            <div class="values-bg" id="bg-install"
+                style="background-image: url('https://images.unsplash.com/photo-1621905252507-b35492cc74b4?q=80&w=2069&auto=format&fit=crop');">
+            </div>
+            <div class="values-bg" id="bg-support"
+                style="background-image: url('https://images.unsplash.com/photo-1534536281715-e28d76689b4d?q=80&w=2069&auto=format&fit=crop');">
+            </div>
+            <div class="values-overlay"></div>
+        </div>
+
+        <div class="container" style="position: relative; z-index: 2;">
+            <div class="text-center fade-in">
+                <span class="section-tag">Nuestros Pilares</span>
+                <h2 class="section-title">¿Por qué elegir Solar GT?</h2>
+            </div>
+
+            <div class="values-grid">
+                <!-- Tarjeta 1: Experiencia -->
+                <article class="value-card fade-in" data-bg="bg-experience">
+                    <h3>Experiencia Comprobada</h3>
+                    <p>Más de 10 años liderando el mercado de energía solar con instalaciones exitosas.</p>
+                </article>
+
+                <!-- Tarjeta 2: Tecnología -->
+                <article class="value-card fade-in" data-bg="bg-tech">
+                    <h3>Tecnología Avanzada</h3>
+                    <p>Utilizamos paneles de última generación con máxima eficiencia energética.</p>
+                </article>
+
+                <!-- Tarjeta 3: Garantía -->
+                <article class="value-card fade-in" data-bg="bg-warranty">
+                    <h3>Garantía Total</h3>
+                    <p>25 años de garantía en todos nuestros productos y servicios de instalación.</p>
+                </article>
+
+                <!-- Tarjeta 4: Ahorro -->
+                <article class="value-card fade-in" data-bg="bg-savings">
+                    <h3>Ahorro Garantizado</h3>
+                    <p>Reduce hasta un 80% en tu factura de electricidad desde el primer mes.</p>
+                </article>
+
+                <!-- Tarjeta 5: Instalación -->
+                <article class="value-card fade-in" data-bg="bg-install">
+                    <h3>Instalación Rápida</h3>
+                    <p>Instalación profesional en menos de 48 horas sin interrumpir tu rutina diaria.</p>
+                </article>
+
+                <!-- Tarjeta 6: Soporte -->
+                <article class="value-card fade-in" data-bg="bg-support">
+                    <h3>Soporte 24/7</h3>
+                    <p>Asistencia técnica disponible las 24 horas para resolver cualquier incidencia.</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICIOS (CUADRÍCULA BENTO) -->
+    <section id="servicios" class="section-padding services">
+        <div class="container">
+            <div class="text-center fade-in">
+                <span class="section-tag">Aplicaciones</span>
+                <h2 class="section-title">Soluciones para cada necesidad</h2>
+            </div>
+
+            <div class="services-grid">
+                <!-- Servicio 1: Paneles Solares -->
+                <!-- Service 1: Paneles Solares -->
+                <article class="service-card service-panels fade-in">
+                    <h3 data-lang="serv_panels_title">Paneles Solares</h3>
+                    <p data-lang="serv_panels_desc">Instalación de paneles fotovoltaicos de alta eficiencia para generar
+                        energía limpia y reducir tu factura eléctrica hasta un 80%.</p>
+                </article>
+
+                <!-- Servicio 2: Calentadores Solares -->
+                <!-- Service 2: Calentadores Solares -->
+                <article class="service-card service-heaters fade-in">
+                    <h3 data-lang="serv_heaters_title">Calentadores Solares</h3>
+                    <p data-lang="serv_heaters_desc">Sistemas de calentamiento de agua con energía solar para hogares y
+                        empresas, ahorrando gas y electricidad todo el año.</p>
+                </article>
+
+                <!-- Servicio 3: Bombeo Solar -->
+                <!-- Service 3: Bombeo Solar -->
+                <article class="service-card service-pumps fade-in">
+                    <h3 data-lang="serv_pumps_title">Bombeo Solar</h3>
+                    <p data-lang="serv_pumps_desc">Soluciones de bombeo de agua alimentadas por energía solar, ideales
+                        para agricultura, ganadería y zonas rurales.</p>
+                </article>
+
+                <!-- Servicio 4: Almacenamiento -->
+                <!-- Service 4: Almacenamiento -->
+                <article class="service-card service-storage fade-in">
+                    <h3 data-lang="serv_storage_title">Almacenamiento de Energía</h3>
+                    <p data-lang="serv_storage_desc">Baterías de litio de última generación para almacenar energía y
+                        garantizar suministro continuo día y noche.</p>
+                </article>
+
+                <!-- Servicio 5: Mantenimiento -->
+                <!-- Service 5: Mantenimiento -->
+                <article class="service-card service-maintenance fade-in">
+                    <h3 data-lang="serv_maintenance_title">Mantenimiento</h3>
+                    <p data-lang="serv_maintenance_desc">Servicio técnico especializado para mantener tus paneles y
+                        sistemas funcionando con máxima eficiencia.</p>
+                </article>
+
+                <!-- Servicio 6: Asesoría -->
+                <!-- Service 6: Asesoría -->
+                <article class="service-card service-consulting fade-in">
+                    <h3 data-lang="serv_consulting_title">Asesoría Energética</h3>
+                    <p data-lang="serv_consulting_desc">Análisis personalizado de consumo y diseño de sistemas solares
+                        adaptados a tus necesidades específicas.</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- SECCIÓN DE PREGUNTAS FRECUENTES -->
+    <section id="faq" class="section-padding faq">
+        <div class="container">
+            <div class="text-center fade-in">
+                <span class="section-tag">Preguntas Frecuentes</span>
+                <h2 class="section-title">Resolvemos tus dudas</h2>
+            </div>
+
+            <div class="faq-grid fade-in">
+                <!-- item 1 -->
+                <div class="faq-item">
+                    <button class="faq-question">
+                        ¿Cuánto puedo ahorrar realmente en mi factura?
+                        <svg class="chevron" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-content">
+                            <p>El ahorro depende de tu consumo actual y la cantidad de paneles instalados, pero
+                                generalmente nuestros clientes reducen entre un <strong>70% y un 90%</strong> de su
+                                factura eléctrica. En tarifas comerciales (Tarifa 2 y 3), el retorno de inversión suele
+                                ser menor a 3 años.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- item 2 -->
+                <div class="faq-item">
+                    <button class="faq-question">
+                        ¿Los paneles funcionan en días nublados o con lluvia?
+                        <svg class="chevron" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-content">
+                            <p>Sí, los paneles solares fotovoltaicos funcionan con la radiación solar, no solo con la
+                                luz
+                                directa. Aunque la producción disminuye en días muy nublados (un 10-25% de su
+                                capacidad),
+                                siguen generando energía. La lluvia incluso ayuda a mantenerlos limpios.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- item 3 -->
+                <div class="faq-item">
+                    <button class="faq-question">
+                        ¿Cuánto tiempo tarda la instalación?
+                        <svg class="chevron" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-content">
+                            <p>Una instalación residencial típica se completa en <strong>1 o 2 días</strong>. Proyectos
+                                comerciales más grandes pueden tomar de 3 a 5 días. Nos encargamos de todo el proceso,
+                                incluyendo permisos y trámites con la compañía eléctrica.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- item 4 -->
+                <div class="faq-item">
+                    <button class="faq-question">
+                        ¿Qué mantenimiento requiere el sistema?
+                        <svg class="chevron" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-content">
+                            <p>Muy poco. Al no tener partes móviles, el mantenimiento es mínimo. Recomendamos una
+                                <strong>limpieza anual</strong> de los paneles (solo con agua) para asegurar máxima
+                                eficiencia, y una revisión general de conexiones cada 2-3 años.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- item 5 -->
+                <div class="faq-item">
+                    <button class="faq-question">
+                        ¿Qué garantía tienen los equipos?
+                        <svg class="chevron" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-content">
+                            <p>Ofrecemos garantías líderes en el mercado: <strong>25 años de garantía de
+                                    rendimiento</strong>
+                                en los paneles solares y 10 años en inversores. Nuestra instalación también cuenta con
+                                garantía de mano de obra por 5 años.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- item 6 -->
+                <div class="faq-item">
+                    <button class="faq-question">
+                        ¿Mi techo es apto para paneles solares?
+                        <svg class="chevron" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-content">
+                            <p>La mayoría de los techos son aptos (concreto, teja, lámina). Realizamos un estudio
+                                estructural preliminar sin costo para asegurar la viabilidad. Si el techo no es ideal,
+                                también diseñamos estructuras para instalación en suelo (tipo pérgola o carport).</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PIE DE PÁGINA -->
+    <footer id="contacto">
+        <div class="container">
+            <div class="footer-grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));">
+                <div class="footer-col">
+                    <a href="#" class="logo" style="margin-bottom: 1rem; display:block;">
+                        <img src="logo-dark.png" alt="Solar GT" class="footer-logo-img">
+                    </a>
+                    <p style="margin-bottom: 2rem;">Energía que impulsa el futuro.</p>
+
+                    <div class="footer-links">
+                        <a href="https://www.instagram.com/solargtvm/" target="_blank" class="footer-link">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                            </svg>
+                            Instagram
+                        </a>
+                        <a href="https://www.facebook.com/solargtvm" target="_blank" class="footer-link">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                            </svg>
+                            Facebook
+                        </a>
+                        <a href="https://wa.me/5492657589494" target="_blank" class="footer-link">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path
+                                    d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z">
+                                </path>
+                            </svg>
+                            +54 9 2657 58-9494
+                        </a>
+                        <a href="https://maps.app.goo.gl/zt1gcWztTdZumajR7" target="_blank" class="footer-link">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <polygon points="1 6 1 22 8 18 16 22 23 18 23 2 16 6 8 2 1 6"></polygon>
+                                <line x1="8" y1="2" x2="8" y2="18"></line>
+                                <line x1="16" y1="6" x2="16" y2="22"></line>
+                            </svg>
+                            Ver en Google Maps
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <div
+                        style="border-radius: var(--border-radius); overflow: hidden; height: 100%; min-height: 300px;">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d4284.453493597947!2d-65.468168!3d-33.674172!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95d16b765b9776b7%3A0x2e76a282b2464d8e!2sSolar%20GT!5e1!3m2!1ses!2sar!4v1769918111012!5m2!1ses!2sar"
+                            width="100%" height="100%" style="border:0; min-height: 300px;" allowfullscreen=""
+                            loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 Solar GT. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+
+
+    <!-- JAVASCRIPT -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Alternar Menú Móvil
+            const mobileToggle = document.querySelector('.mobile-toggle');
+            const navLinks = document.querySelector('.nav-links');
+
+            mobileToggle.addEventListener('click', () => {
+                navLinks.classList.toggle('active');
+
+                // Animar hamburguesa a X
+                const bars = document.querySelectorAll('.bar');
+                // Lógica simple de animación de alternancia podría ir aquí, 
+                // pero por simplicidad confiamos en la interacción del menú deslizable
+            });
+
+            // Cerrar menú al hacer clic en un enlace
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.addEventListener('click', () => {
+                    navLinks.classList.remove('active');
+                });
+            });
+
+            // Intersection Observer para Animaciones de Aparición
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.1
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target); // Solo animar una vez
+                    }
+                });
+            }, observerOptions);
+
+            const fadeElements = document.querySelectorAll('.fade-in');
+            fadeElements.forEach(el => observer.observe(el));
+
+            // Efecto de Desplazamiento del Encabezado (Cambio de transparencia opcional)
+            const header = document.querySelector('header');
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 50) {
+                    header.style.boxShadow = 'var(--shadow-md)';
+                } else {
+                    header.style.boxShadow = 'var(--shadow-sm)';
+                }
+            });
+        });
+
+        // --- NUEVA LÓGICA JAVASCRIPT ---
+
+        // 1. Alternar Tema
+        const themeBtn = document.getElementById('theme-toggle');
+        const sunIcon = document.querySelector('.sun-icon');
+        const moonIcon = document.querySelector('.moon-icon');
+        const html = document.documentElement;
+
+        // Función de Actualización de Logo
+        const updateLogos = (theme) => {
+            const logos = document.querySelectorAll('.logo-img');
+            const newSrc = theme === 'dark' ? 'logo-dark.png' : 'logo.png';
+            logos.forEach(img => img.src = newSrc);
+        };
+
+        // Comprobar almacenamiento local
+        if (localStorage.getItem('theme') === 'dark') {
+            html.setAttribute('data-theme', 'dark');
+            sunIcon.style.display = 'block';
+            moonIcon.style.display = 'none';
+            updateLogos('dark');
+        }
+
+        themeBtn.addEventListener('click', () => {
+            if (html.getAttribute('data-theme') === 'dark') {
+                html.removeAttribute('data-theme');
+                sunIcon.style.display = 'none';
+                moonIcon.style.display = 'block';
+                localStorage.setItem('theme', 'light');
+                updateLogos('light');
+            } else {
+                html.setAttribute('data-theme', 'dark');
+                sunIcon.style.display = 'block';
+                moonIcon.style.display = 'none';
+                localStorage.setItem('theme', 'dark');
+                updateLogos('dark');
+            }
+        });
+
+        // 2. Alternar Idioma
+        const langBtn = document.getElementById('lang-toggle');
+        let currentLang = 'es';
+
+        const translations = {
+            es: {
+                nav_home: "Inicio", nav_about: "Nosotros", nav_values: "Valores", nav_services: "Soluciones", nav_contact: "Contacto",
+                hero_title: "Impulsar hoy la energía del futuro",
+                hero_subtitle: "Expertos en soluciones fotovoltaicas y térmicas de alto rendimiento para el campo, la industria y el comercio.",
+                hero_cta1: "Ver Soluciones", hero_cta2: "Conocer Más",
+                counter_years: "Años de Experiencia", counter_projects: "Proyectos Completados", counter_mwh: "MWh Generados", counter_clients: "Clientes Satisfechos",
+                serv_panels_title: "Paneles Solares", serv_panels_desc: "Instalación de paneles fotovoltaicos de alta eficiencia para generar energía limpia y reducir tu factura eléctrica hasta un 80%.",
+                serv_heaters_title: "Calentadores Solares", serv_heaters_desc: "Sistemas de calentamiento de agua con energía solar para hogares y empresas, ahorrando gas y electricidad todo el año.",
+                serv_pumps_title: "Bombeo Solar", serv_pumps_desc: "Soluciones de bombeo de agua alimentadas por energía solar, ideales para agricultura, ganadería y zonas rurales.",
+                serv_storage_title: "Almacenamiento de Energía", serv_storage_desc: "Baterías de litio de última generación para almacenar energía y garantizar suministro continuo día y noche.",
+                serv_maintenance_title: "Mantenimiento", serv_maintenance_desc: "Servicio técnico especializado para mantener tus paneles y sistemas funcionando con máxima eficiencia.",
+                serv_consulting_title: "Asesoría Energética", serv_consulting_desc: "Análisis personalizado de consumo y diseño de sistemas solares adaptados a tus necesidades específicas.",
+                val_transparency_title: "Transparencia Operativa", val_transparency_desc: "Claridad total en cada etapa del proyecto. Desde el presupuesto inicial hasta la implementación, sin costos ocultos y con comunicación constante.",
+                val_innovation_title: "Innovación Aplicada", val_innovation_desc: "Utilizamos la última tecnología en paneles monocristalinos y sistemas de seguimiento para maximizar el rendimiento energético de cada instalación.",
+                val_quality_title: "Calidad Certificada", val_quality_desc: "Equipamiento homologado y cumplimiento estricto de normativas de seguridad. Garantizamos durabilidad y eficiencia a largo plazo."
+            },
+            en: {
+                nav_home: "Home", nav_about: "About Us", nav_values: "Values", nav_services: "Solutions", nav_contact: "Contact",
+                hero_title: "Powering the Energy of the Future Today",
+                hero_subtitle: "Experts in high-performance photovoltaic and thermal solutions for rural, industrial, and commercial sectors.",
+                hero_cta1: "View Solutions", hero_cta2: "Learn More",
+                counter_years: "Years of Experience", counter_projects: "Projects Completed", counter_mwh: "MWh Generated", counter_clients: "Satisfied Clients",
+                serv_panels_title: "Solar Panels", serv_panels_desc: "Installation of high-efficiency photovoltaic panels to generate clean energy and reduce your electricity bill by up to 80%.",
+                serv_heaters_title: "Solar Heaters", serv_heaters_desc: "Solar water heating systems for homes and businesses, saving gas and electricity all year round.",
+                serv_pumps_title: "Solar Pumping", serv_pumps_desc: "Solar-powered water pumping solutions, ideal for agriculture, livestock, and rural areas.",
+                serv_storage_title: "Energy Storage", serv_storage_desc: "Last-generation lithium batteries to store energy and ensure continuous supply day and night.",
+                serv_maintenance_title: "Maintenance", serv_maintenance_desc: "Specialized technical service to keep your panels and systems running at maximum efficiency.",
+                serv_consulting_title: "Energy Consulting", serv_consulting_desc: "Personalized consumption analysis and design of solar systems adapted to your specific needs.",
+                val_transparency_title: "Operational Transparency", val_transparency_desc: "Total clarity at every stage of the project. From the initial budget to implementation, with no hidden costs and constant communication.",
+                val_innovation_title: "Applied Innovation", val_innovation_desc: "We use the latest technology in monocrystalline panels and tracking systems to maximize the energy yield of every installation.",
+                val_quality_title: "Certified Quality", val_quality_desc: "Homologated equipment and strict compliance with safety regulations. We guarantee durability and efficiency in the long term."
+            }
+        };
+
+        langBtn.addEventListener('click', () => {
+            currentLang = currentLang === 'es' ? 'en' : 'es';
+            langBtn.textContent = currentLang === 'es' ? 'EN' : 'ES';
+            updateLanguage();
+        });
+
+        function updateLanguage() {
+            document.querySelectorAll('[data-lang]').forEach(el => {
+                const key = el.getAttribute('data-lang');
+                if (translations[currentLang][key]) {
+                    el.textContent = translations[currentLang][key];
+                }
+            });
+        }
+
+        // 3. Counter Animation
+        const counters = document.querySelectorAll('.counter-value');
+        const speed = 100;
+
+        const animateCounters = (entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const counter = entry.target;
+
+                    const updateCount = () => {
+                        const target = +counter.getAttribute('data-target');
+                        const count = +counter.innerText;
+
+                        const inc = target / speed;
+
+                        if (count < target) {
+                            counter.innerText = Math.ceil(count + inc);
+                            setTimeout(updateCount, 20);
+                        } else {
+                            counter.innerText = target + (target === 100 ? '%' : '+');
+                        }
+                    };
+                    updateCount();
+                    observer.unobserve(counter);
+                }
+            });
+        };
+
+        const counterObserver = new IntersectionObserver(animateCounters, { threshold: 0.5 });
+        counters.forEach(counter => counterObserver.observe(counter));
+
+        // 4. Hero Carousel
+        const slides = document.querySelectorAll('.carousel-slide');
+        let currentSlide = 0;
+
+        function nextSlide() {
+            slides[currentSlide].classList.remove('active');
+            currentSlide = (currentSlide + 1) % slides.length;
+            slides[currentSlide].classList.add('active');
+        }
+
+        // Auto advance every 5 seconds
+        setInterval(nextSlide, 5000);
+
+        // 5. Values Background Hover Effect
+        const valueCards = document.querySelectorAll('.value-card[data-bg]');
+        const bgDefault = document.getElementById('bg-default');
+
+        valueCards.forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                const bgId = card.getAttribute('data-bg');
+                const bgElement = document.getElementById(bgId);
+
+                // Hide all BGs
+                document.querySelectorAll('.values-bg').forEach(bg => bg.classList.remove('active'));
+
+                // Show target BG
+                if (bgElement) bgElement.classList.add('active');
+            });
+
+            card.addEventListener('mouseleave', () => {
+                // Return to default (or maybe keep last? User said "on hover change", implies return or stay. 
+                // Let's stay for smoother feel, or return to default. Let's return to default for now)
+                document.querySelectorAll('.values-bg').forEach(bg => bg.classList.remove('active'));
+                bgDefault.classList.add('active');
+            });
+        });
+        // 6. Team Carousel Infinite Loop
+        const teamTrack = document.querySelector('.team-track');
+        // Clone all cards to create infinite effect
+        if (teamTrack) {
+            const cards = Array.from(teamTrack.children);
+            cards.forEach(card => {
+                const clone = card.cloneNode(true);
+                teamTrack.appendChild(clone);
+            });
+        }
+
+        // 7. FAQ Accordion
+        const faqQuestions = document.querySelectorAll('.faq-question');
+
+        faqQuestions.forEach(question => {
+            question.addEventListener('click', () => {
+                const item = question.parentElement;
+                const answer = item.querySelector('.faq-answer');
+
+                // Toggle active class
+                const isActive = item.classList.contains('active');
+
+                // Close others (optional - removing for "independent" behavior as planned)
+                // document.querySelectorAll('.faq-item').forEach(i => {
+                //     i.classList.remove('active');
+                //     i.querySelector('.faq-answer').style.maxHeight = null;
+                // });
+
+                if (isActive) {
+                    item.classList.remove('active');
+                    answer.style.maxHeight = null;
+                } else {
+                    item.classList.add('active');
+                    // Set max-height to scrollHeight to animate correctly
+                    answer.style.maxHeight = answer.scrollHeight + "px";
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
