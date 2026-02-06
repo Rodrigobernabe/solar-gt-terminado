@@ -843,8 +843,22 @@
             transition: color 0.3s;
         }
 
-        .service-card:hover p {
+        .service-card:hover p,
+        .service-card:hover .service-special-content {
             color: #d1d5db;
+        }
+
+        .service-special-content {
+            font-size: 0.95rem;
+            color: var(--color-text-light);
+            text-align: left;
+            transition: color 0.3s;
+        }
+
+        .service-card:hover .service-special-content,
+        .service-card:hover .service-special-content strong,
+        .service-card:hover .service-special-content li {
+            color: #ffffff !important;
         }
 
         /* 
@@ -1655,7 +1669,7 @@
                 <!-- Servicio 4: Sistemas Fotovoltaicos -->
                 <article class="service-card service-photovoltaic slide-in-left">
                     <h3>Sistemas Fotovoltaicos</h3>
-                    <div style="font-size: 0.95rem; color: var(--color-text-light); text-align: left;">
+                    <div class="service-special-content">
                         <ul style="list-style-type: none; padding-left: 0;">
                             <li style="margin-bottom: 0.5rem;"><strong>• Sistemas Off Grid:</strong> Ideal para zonas
                                 sin red eléctrica o con cortes frecuentes.</li>
