@@ -64,7 +64,7 @@
 
             /* Tipografía */
             --font-main: 'Inter', sans-serif;
-            --text-hero: clamp(2.5rem, 5vw, 4rem);
+            --text-hero: clamp(2rem, 4vw, 3rem);
             --text-h1: clamp(2rem, 4vw, 3rem);
             --text-h2: clamp(1.5rem, 3vw, 2.25rem);
             --text-h3: clamp(1.25rem, 2.5vw, 1.75rem);
@@ -518,13 +518,17 @@
         }
 
         .values-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
             gap: 2rem;
             margin-top: 3rem;
         }
 
         .value-card {
+            flex: 1 1 300px;
+            max-width: 450px;
+            /* Optional constraint to keep them looking like cards */
             background: var(--color-card-bg);
             padding: 2.5rem;
             border-radius: var(--border-radius);
@@ -636,13 +640,8 @@
         }
 
         .service-card:hover {
-            transform: scale(1.05);
-            /* Agrandar tarjeta completa */
             color: #ffffff;
             border-color: transparent;
-            z-index: 10;
-            /* Asegurar que flote por encima */
-            box-shadow: var(--shadow-lg);
         }
 
         .service-card:hover::before,
@@ -761,19 +760,38 @@
         }
 
         .service-heaters::before {
-            background-image: url('service_heaters.png');
+            background-image: url('termotanque-solar.jpg');
         }
 
         .service-pumps::before {
-            background-image: url('service_pumps.png');
+            background-image: url('bombeo-solar.jpg');
         }
 
-        .service-storage::before {
-            background-image: url('https://images.unsplash.com/photo-1593941707882-a5bba14938c7?q=80&w=2072&auto=format&fit=crop');
+        .service-photovoltaic::before {
+            animation: bg-cycle-pv 10s infinite;
+            background-size: cover;
+            background-position: center;
         }
 
-        .service-maintenance::before {
-            background-image: url('https://images.unsplash.com/photo-1545259741-2ea3ebf61fa3?q=80&w=2000&auto=format&fit=crop');
+        @keyframes bg-cycle-pv {
+
+            0%,
+            45% {
+                background-image: url('fv-system-1.jpg');
+            }
+
+            50%,
+            95% {
+                background-image: url('fv-system-2.jpg');
+            }
+
+            100% {
+                background-image: url('fv-system-1.jpg');
+            }
+        }
+
+        .service-pool-heater::before {
+            background-image: url('climatizador-pileta.jpg');
         }
 
         .service-consulting::before {
@@ -1339,12 +1357,13 @@
         <div class="hero-overlay"></div>
         <div class="container">
             <div class="hero-content fade-in">
-                <h1 data-lang="hero_title">Impulsar hoy la energía del futuro</h1>
-                <p data-lang="hero_subtitle">Expertos en soluciones fotovoltaicas y térmicas de alto rendimiento para el
-                    campo, la industria y el comercio.</p>
+                <h1 data-lang="hero_title">Impulsamos la transición energética <br> con soluciones solares eficaces y
+                    rentables</h1>
+                <p data-lang="hero_subtitle">Solar GT, una empresa dedicada a dar soluciones fotovoltaicas y térmicas de
+                    alto rendimiento para el campo, la industria, el comercio y el hogar.</p>
                 <div class="hero-btns">
                     <a href="#servicios" class="btn btn-primary" data-lang="hero_cta1">Ver Soluciones</a>
-                    <a href="#nosotros" class="btn btn-outline" data-lang="hero_cta2">Conocer Más</a>
+                    <a href="#contacto" class="btn btn-outline" data-lang="hero_cta2">Contacto</a>
                 </div>
             </div>
         </div>
@@ -1354,20 +1373,20 @@
     <section class="counters">
         <div class="container counters-grid">
             <div class="counter-item fade-in">
-                <h3 class="counter-value" data-target="10">0</h3>
-                <p data-lang="counter_years">Años de Experiencia</p>
+                <h3 class="counter-value" data-target="8">0</h3>
+                <p data-lang="counter_years">Más de 8 años de experiencia</p>
             </div>
             <div class="counter-item fade-in">
-                <h3 class="counter-value" data-target="500">0</h3>
-                <p data-lang="counter_projects">Proyectos Completados</p>
+                <h3 class="counter-value" data-target="65">0</h3>
+                <p data-lang="counter_projects">Más de 65 proyectos terminados</p>
             </div>
             <div class="counter-item fade-in">
-                <h3 class="counter-value" data-target="2000">0</h3>
-                <p data-lang="counter_mwh">MWh Generados</p>
+                <h3 class="counter-value" data-target="90">0</h3>
+                <p data-lang="counter_mwh">Más de 90 KWh instalados</p>
             </div>
             <div class="counter-item fade-in">
                 <h3 class="counter-value" data-target="100">0</h3>
-                <p data-lang="counter_clients">Clientes Satisfechos</p>
+                <p data-lang="counter_clients">100 % clientes satisfechos</p>
             </div>
         </div>
     </section>
@@ -1422,7 +1441,7 @@
                 </div>
                 <div class="about-image slide-out-right" style="min-height: 400px; height: 100%;">
                     <!-- Usando imagen de equipo subida -->
-                    <img src="team.jpg" alt="Equipo de técnicos de Solar GT" loading="lazy"
+                    <img src="nosotros-main.jpg" alt="Equipo de técnicos de Solar GT" loading="lazy"
                         style="width: 100%; height: 100%; object-fit: cover; border-radius: var(--border-radius);">
                 </div>
             </div>
@@ -1538,23 +1557,17 @@
         <!-- Contenedor de Fondo Dinámico -->
         <div class="values-bg-container">
             <div class="values-bg active" id="bg-default"></div>
-            <div class="values-bg" id="bg-experience"
+            <div class="values-bg" id="bg-experience" style="background-image: url('Paneles 2.jpg');">
+            </div>
+            <div class="values-bg" id="bg-advice"
                 style="background-image: url('https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=2070&auto=format&fit=crop');">
             </div>
-            <div class="values-bg" id="bg-tech"
-                style="background-image: url('https://images.unsplash.com/photo-1558449028-b53a39d100fc?q=80&w=2070&auto=format&fit=crop');">
+            <div class="values-bg" id="bg-install" style="background-image: url('install.jpg');">
             </div>
-            <div class="values-bg" id="bg-warranty"
+            <div class="values-bg" id="bg-tech" style="background-image: url('Paneles 1.jpg');">
+            </div>
+            <div class="values-bg" id="bg-post-sale"
                 style="background-image: url('https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=1974&auto=format&fit=crop');">
-            </div>
-            <div class="values-bg" id="bg-savings"
-                style="background-image: url('https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?q=80&w=2071&auto=format&fit=crop');">
-            </div>
-            <div class="values-bg" id="bg-install"
-                style="background-image: url('https://images.unsplash.com/photo-1621905252507-b35492cc74b4?q=80&w=2069&auto=format&fit=crop');">
-            </div>
-            <div class="values-bg" id="bg-support"
-                style="background-image: url('https://images.unsplash.com/photo-1534536281715-e28d76689b4d?q=80&w=2069&auto=format&fit=crop');">
             </div>
             <div class="values-overlay"></div>
         </div>
@@ -1568,38 +1581,36 @@
             <div class="values-grid">
                 <!-- Tarjeta 1: Experiencia -->
                 <article class="value-card slide-in-top" data-bg="bg-experience">
-                    <h3>Experiencia Comprobada</h3>
-                    <p>Más de 10 años liderando el mercado de energía solar con instalaciones exitosas.</p>
+                    <h3>Experiencia comprobada</h3>
+                    <p>Más de 8 años en el rubro y una amplia trayectoria en trabajos con energía solar.</p>
                 </article>
 
-                <!-- Tarjeta 2: Tecnología -->
-                <article class="value-card slide-in-top" data-bg="bg-tech">
-                    <h3>Tecnología Avanzada</h3>
-                    <p>Utilizamos paneles de última generación con máxima eficiencia energética.</p>
+                <!-- Tarjeta 2: Asesoramiento -->
+                <article class="value-card slide-in-top" data-bg="bg-advice">
+                    <h3>Asesoramiento Real</h3>
+                    <p>Elaboramos proyectos a la medida de nuestros clientes en forma transparente, buscando la mejor
+                        eficiencia.</p>
                 </article>
 
-                <!-- Tarjeta 3: Garantía -->
-                <article class="value-card slide-in-top" data-bg="bg-warranty">
-                    <h3>Garantía Total</h3>
-                    <p>25 años de garantía en todos nuestros productos y servicios de instalación.</p>
+                <!-- Tarjeta 3: Instalación -->
+                <article class="value-card slide-in-top" data-bg="bg-install">
+                    <h3>Rápida instalación</h3>
+                    <p>Priorizamos los tiempos de instalación llevándolos al mínimo, entendiendo la importancia en la
+                        continuidad de los procesos.</p>
                 </article>
 
-                <!-- Tarjeta 4: Ahorro -->
-                <article class="value-card slide-in-bottom" data-bg="bg-savings">
-                    <h3>Ahorro Garantizado</h3>
-                    <p>Reduce hasta un 80% en tu factura de electricidad desde el primer mes.</p>
+                <!-- Tarjeta 4: Tecnología -->
+                <article class="value-card slide-in-bottom" data-bg="bg-tech">
+                    <h3>Tecnología avanzada</h3>
+                    <p>Utilizamos equipos de última generación para optimizar cada proyecto y estamos en constante
+                        actualización técnica.</p>
                 </article>
 
-                <!-- Tarjeta 5: Instalación -->
-                <article class="value-card slide-in-bottom" data-bg="bg-install">
-                    <h3>Instalación Rápida</h3>
-                    <p>Instalación profesional en menos de 48 horas sin interrumpir tu rutina diaria.</p>
-                </article>
-
-                <!-- Tarjeta 6: Soporte -->
-                <article class="value-card slide-in-bottom" data-bg="bg-support">
-                    <h3>Soporte 24/7</h3>
-                    <p>Asistencia técnica disponible las 24 horas para resolver cualquier incidencia.</p>
+                <!-- Tarjeta 5: Postventa -->
+                <article class="value-card slide-in-bottom" data-bg="bg-post-sale">
+                    <h3>Servicio Postventa</h3>
+                    <p>Procuramos brindar una solución estable y duradera en el tiempo, gestionando asesorías, garantías
+                        y reparaciones, manteniendo una relación cercana con nuestros clientes.</p>
                 </article>
             </div>
         </div>
@@ -1625,39 +1636,50 @@
                 <!-- Servicio 2: Calentadores Solares -->
                 <!-- Service 2: Calentadores Solares -->
                 <article class="service-card service-heaters fade-in">
-                    <h3 data-lang="serv_heaters_title">Calentadores Solares</h3>
-                    <p data-lang="serv_heaters_desc">Sistemas de calentamiento de agua con energía solar para hogares y
-                        empresas, ahorrando gas y electricidad todo el año.</p>
+                    <h3 data-lang="serv_heaters_title">Termotanque Solar</h3>
+                    <p data-lang="serv_heaters_desc">Teniendo en cuenta los costos de calentar agua, el termotanque
+                        solar es la solución más óptima y versátil, no solo por el ahorro económico, sino también por la
+                        posibilidad de tener agua caliente en lugares remotos.</p>
                 </article>
 
                 <!-- Servicio 3: Bombeo Solar -->
                 <!-- Service 3: Bombeo Solar -->
                 <article class="service-card service-pumps slide-in-right">
                     <h3 data-lang="serv_pumps_title">Bombeo Solar</h3>
-                    <p data-lang="serv_pumps_desc">Soluciones de bombeo de agua alimentadas por energía solar, ideales
-                        para agricultura, ganadería y zonas rurales.</p>
+                    <p data-lang="serv_pumps_desc">Contamos con una amplia variedad de bombas solares, según caudal y
+                        profundidad requerida y la posibilidad de solarizar bombas que no son solares, cubriendo la
+                        necesidad de nuestros clientes, simplificando la extracción de agua de la manera más eficiente.
+                    </p>
                 </article>
 
-                <!-- Servicio 4: Almacenamiento -->
-                <!-- Service 4: Almacenamiento -->
-                <article class="service-card service-storage slide-in-left">
-                    <h3 data-lang="serv_storage_title">Almacenamiento de Energía</h3>
-                    <p data-lang="serv_storage_desc">Baterías de litio de última generación para almacenar energía y
-                        garantizar suministro continuo día y noche.</p>
+                <!-- Servicio 4: Sistemas Fotovoltaicos -->
+                <article class="service-card service-photovoltaic slide-in-left">
+                    <h3>Sistemas Fotovoltaicos</h3>
+                    <div style="font-size: 0.95rem; color: var(--color-text-light); text-align: left;">
+                        <ul style="list-style-type: none; padding-left: 0;">
+                            <li style="margin-bottom: 0.5rem;"><strong>• Sistemas Off Grid:</strong> Ideal para zonas
+                                sin red eléctrica o con cortes frecuentes.</li>
+                            <li style="margin-bottom: 0.5rem;"><strong>• Sistemas On Grid:</strong> Ahorro en tiempo
+                                real, sustituye energía de red por solar durante el día, con inyección a red.</li>
+                            <li style="margin-bottom: 0.5rem;"><strong>• Sistemas Híbridos:</strong> La solución más
+                                completa, combina virtudes de Off Grid y On Grid.</li>
+                        </ul>
+                        <p style="margin-top: 1rem;">Te ofrecemos asesoramiento del sistema acorde a tu necesidad.</p>
+                    </div>
                 </article>
 
-                <!-- Servicio 5: Mantenimiento -->
-                <!-- Service 5: Mantenimiento -->
-                <article class="service-card service-maintenance fade-in">
-                    <h3 data-lang="serv_maintenance_title">Mantenimiento</h3>
-                    <p data-lang="serv_maintenance_desc">Servicio técnico especializado para mantener tus paneles y
-                        sistemas funcionando con máxima eficiencia.</p>
+                <!-- Servicio 5: Climatizadores de pileta -->
+                <article class="service-card service-pool-heater fade-in">
+                    <h3>Climatizadores de pileta</h3>
+                    <p>Son sistemas para elevar unos grados el agua de tu piscina y poder disfrutarla unos meses más.
+                        Ofrecemos distintas opciones según la necesidad del cliente, Bombas de Calor, Colectores de
+                        tubos al vacío o Mantas de EPDM.</p>
                 </article>
 
                 <!-- Servicio 6: Asesoría -->
                 <!-- Service 6: Asesoría -->
                 <article class="service-card service-consulting slide-in-right">
-                    <h3 data-lang="serv_consulting_title">Asesoría Energética</h3>
+                    <h3 data-lang="serv_consulting_title">Asesoría Personalizada</h3>
                     <p data-lang="serv_consulting_desc">Análisis personalizado de consumo y diseño de sistemas solares
                         adaptados a tus necesidades específicas.</p>
                 </article>
@@ -1989,10 +2011,10 @@
         const translations = {
             es: {
                 nav_home: "Inicio", nav_about: "Nosotros", nav_values: "Valores", nav_services: "Soluciones", nav_contact: "Contacto",
-                hero_title: "Impulsar hoy la energía del futuro",
-                hero_subtitle: "Expertos en soluciones fotovoltaicas y térmicas de alto rendimiento para el campo, la industria y el comercio.",
-                hero_cta1: "Ver Soluciones", hero_cta2: "Conocer Más",
-                counter_years: "Años de Experiencia", counter_projects: "Proyectos Completados", counter_mwh: "MWh Generados", counter_clients: "Clientes Satisfechos",
+                hero_title: "Impulsamos la transición energética <br> con soluciones solares eficaces y rentables",
+                hero_subtitle: "Solar GT, una empresa dedicada a dar soluciones fotovoltaicas y térmicas de alto rendimiento para el campo, la industria, el comercio y el hogar.",
+                hero_cta1: "Ver Soluciones", hero_cta2: "Contacto",
+                counter_years: "Más de 8 años de experiencia", counter_projects: "Más de 65 proyectos terminados", counter_mwh: "Más de 90 KWh instalados", counter_clients: "100 % clientes satisfechos",
                 serv_panels_title: "Paneles Solares", serv_panels_desc: "Instalación de paneles fotovoltaicos de alta eficiencia para generar energía limpia y reducir tu factura eléctrica hasta un 80%.",
                 serv_heaters_title: "Calentadores Solares", serv_heaters_desc: "Sistemas de calentamiento de agua con energía solar para hogares y empresas, ahorrando gas y electricidad todo el año.",
                 serv_pumps_title: "Bombeo Solar", serv_pumps_desc: "Soluciones de bombeo de agua alimentadas por energía solar, ideales para agricultura, ganadería y zonas rurales.",
