@@ -64,7 +64,7 @@
 
             /* Tipografía */
             --font-main: 'Inter', sans-serif;
-            --text-hero: clamp(3.5rem, 7vw, 5.5rem);
+            --text-hero: clamp(2.5rem, 6vw, 5.5rem);
             --text-h1: clamp(2rem, 4vw, 3rem);
             --text-h2: clamp(1.5rem, 3vw, 2.25rem);
             --text-h3: clamp(1.25rem, 2.5vw, 1.75rem);
@@ -343,14 +343,17 @@
         ======================================== 
         */
         .hero {
-            height: 100vh;
-            min-height: 600px;
             position: relative;
+            min-height: 100vh;
+            /* Permitir que la altura crezca en móviles si el contenido es extenso */
+            height: auto;
             display: flex;
             align-items: center;
             color: #ffffff;
             /* Siempre texto blanco en el hero */
             overflow: hidden;
+            padding-top: var(--header-height);
+            padding-bottom: 3rem;
         }
 
         .video-container {
@@ -1040,6 +1043,11 @@
                 grid-auto-columns: 85%;
                 /* Tarjetas más grandes en móvil */
             }
+
+            .hero-logo {
+                max-width: 180px;
+                margin-bottom: 1.5rem;
+            }
         }
 
         /* 
@@ -1495,8 +1503,9 @@
         <div class="container">
             <div class="hero-content fade-in">
                 <img src="logo.png" alt="Solar GT Logo" class="hero-logo">
-                <h1 data-lang="hero_title">Solar GT, impulsando la transición energética</h1>
-                <p data-lang="hero_subtitle">Empresa de energía solar, dedicada a dar soluciones fotovoltaicas y
+                <h1 data-lang="hero_title">Impulsando la transición energética</h1>
+                <p data-lang="hero_subtitle">Solar GT es una empresa de energía solar, dedicada a dar soluciones
+                    fotovoltaicas y
                     térmicas de alto rendimiento para el campo, la industria, el comercio y el hogar</p>
                 <div class="hero-btns">
                     <a href="#servicios" class="btn btn-primary" data-lang="hero_cta1">Ver Soluciones</a>
