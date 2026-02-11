@@ -64,7 +64,7 @@
 
             /* Tipografía */
             --font-main: 'Inter', sans-serif;
-            --text-hero: clamp(2rem, 4vw, 3rem);
+            --text-hero: clamp(3.5rem, 7vw, 5.5rem);
             --text-h1: clamp(2rem, 4vw, 3rem);
             --text-h2: clamp(1.5rem, 3vw, 2.25rem);
             --text-h3: clamp(1.25rem, 2.5vw, 1.75rem);
@@ -390,7 +390,7 @@
         }
 
         .hero-content {
-            max-width: 800px;
+            max-width: 1200px;
             margin: 0 auto;
             text-align: center;
             position: relative;
@@ -409,6 +409,13 @@
             margin: 0 auto 2.5rem auto;
             max-width: 600px;
             opacity: 0.9;
+        }
+
+        .hero-logo {
+            max-width: 250px;
+            height: auto;
+            margin: 0 auto 2rem auto;
+            display: block;
         }
 
         .hero-btns {
@@ -587,6 +594,14 @@
             grid-template-columns: repeat(2, 1fr);
             gap: 1.5rem;
             margin-top: 3rem;
+        }
+
+        /* Centrar la última tarjeta (Asesoría Personalizada) */
+        .services-grid>article:last-child {
+            grid-column: 1 / -1;
+            justify-self: center;
+            width: 100%;
+            max-width: 800px;
         }
 
 
@@ -918,6 +933,16 @@
             padding-top: 4rem;
             padding-bottom: 2rem;
             font-size: 0.9rem;
+        }
+
+        .contact-card {
+            background: linear-gradient(rgba(17, 24, 39, 0.85), rgba(17, 24, 39, 0.95)), url('local.jpg');
+            background-size: cover;
+            background-position: center;
+            padding: 2.5rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-md);
+            border: 1px solid #374151;
         }
 
         .footer-grid {
@@ -1361,20 +1386,17 @@
     <!-- HÉROE (CARRUSEL) -->
     <section id="inicio" class="hero">
         <div class="video-container">
-            <video id="hero-vid-1" class="hero-video active" autoplay muted playsinline>
-                <source src="hero-video-1.mp4" type="video/mp4">
-            </video>
-            <video id="hero-vid-2" class="hero-video" muted playsinline>
-                <source src="hero-video-2.mp4" type="video/mp4">
+            <video class="hero-video active" autoplay muted loop playsinline>
+                <source src="SolarHero.mp4" type="video/mp4">
             </video>
         </div>
         <div class="hero-overlay"></div>
         <div class="container">
             <div class="hero-content fade-in">
-                <h1 data-lang="hero_title">Impulsamos la transición energética <br> con soluciones solares eficaces y
-                    rentables</h1>
-                <p data-lang="hero_subtitle">Solar GT, una empresa dedicada a dar soluciones fotovoltaicas y térmicas de
-                    alto rendimiento para el campo, la industria, el comercio y el hogar.</p>
+                <img src="logo.png" alt="Solar GT Logo" class="hero-logo">
+                <h1 data-lang="hero_title">Solar GT, impulsando la transición energética</h1>
+                <p data-lang="hero_subtitle">Empresa de energía solar, dedicada a dar soluciones fotovoltaicas y
+                    térmicas de alto rendimiento para el campo, la industria, el comercio y el hogar</p>
                 <div class="hero-btns">
                     <a href="#servicios" class="btn btn-primary" data-lang="hero_cta1">Ver Soluciones</a>
                     <a href="#contacto" class="btn btn-outline" data-lang="hero_cta2">Contacto</a>
@@ -1455,116 +1477,14 @@
                 </div>
                 <div class="about-image slide-out-right" style="min-height: 400px; height: 100%;">
                     <!-- Usando imagen de equipo subida -->
-                    <img src="nosotros-main.jpg" alt="Equipo de técnicos de Solar GT" loading="lazy"
+                    <img src="SolarGtNosotros.png" alt="Equipo de técnicos de Solar GT" loading="lazy"
                         style="width: 100%; height: 100%; object-fit: cover; border-radius: var(--border-radius);">
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- SECCIÓN DE EQUIPO -->
-    <section id="equipo" class="section-padding team">
-        <div class="container">
-            <div class="text-center fade-in">
-                <span class="section-tag">Nuestro Equipo</span>
-                <h2 class="section-title">Quienes hacen posible el cambio</h2>
-            </div>
 
-            <div class="team-carousel">
-                <div class="team-track">
-                    <!-- Director General -->
-                    <div class="team-card fade-in">
-                        <div class="team-img">
-                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=1000&auto=format&fit=crop"
-                                alt="Carlos Méndez">
-                        </div>
-                        <div class="team-info">
-                            <h3>Carlos Méndez</h3>
-                            <p class="role">Director General</p>
-                            <p class="desc">Visionario con 15 años de experiencia liderando proyectos de energía
-                                renovable
-                                en Latam.</p>
-                        </div>
-                    </div>
-
-                    <!-- Ingeniera -->
-                    <div class="team-card fade-in">
-                        <div class="team-img">
-                            <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?q=80&w=1000&auto=format&fit=crop"
-                                alt="Sofía López">
-                        </div>
-                        <div class="team-info">
-                            <h3>Ing. Sofía López</h3>
-                            <p class="role">Jefa de Ingeniería</p>
-                            <p class="desc">Especialista en diseño fotovoltaico y optimización de eficiencia energética
-                                industrial.</p>
-                        </div>
-                    </div>
-
-                    <!-- Técnico -->
-                    <div class="team-card fade-in">
-                        <div class="team-img">
-                            <img src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?q=80&w=1000&auto=format&fit=crop"
-                                alt="Juan Pérez">
-                        </div>
-                        <div class="team-info">
-                            <h3>Juan Pérez</h3>
-                            <p class="role">Supervisor Técnico</p>
-                            <p class="desc">Experto en instalaciones de campo y mantenimiento preventivo de alta
-                                tensión.
-                            </p>
-                        </div>
-                    </div>
-
-                    <!-- Ventas -->
-                    <div class="team-card fade-in">
-                        <div class="team-img">
-                            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=1000&auto=format&fit=crop"
-                                alt="Laura García">
-                        </div>
-                        <div class="team-info">
-                            <h3>Laura García</h3>
-                            <p class="role">Gerente de Ventas</p>
-                            <p class="desc">Apasionada por conectar empresas con soluciones que reducen costos y huella
-                                de
-                                carbono.</p>
-                        </div>
-                    </div>
-
-                    <!-- Soporte -->
-                    <div class="team-card fade-in">
-                        <div class="team-img">
-                            <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?q=80&w=1000&auto=format&fit=crop"
-                                alt="Martín Rodríguez">
-                        </div>
-                        <div class="team-info">
-                            <h3>Martín Rodríguez</h3>
-                            <p class="role">Soporte y Post-Venta</p>
-                            <p class="desc">Siempre disponible para garantizar que tu sistema funcione al 100% día tras
-                                día.
-                            </p>
-                        </div>
-                    </div>
-
-                    <!-- VOS -->
-                    <div class="team-card fade-in team-you">
-                        <div class="team-img">
-                            <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=1000&auto=format&fit=crop"
-                                alt="¡Y vos!">
-                        </div>
-                        <div class="team-info">
-                            <h3>¡Y VOS!</h3>
-                            <p class="role">Futuro integrante</p>
-                            <p class="desc">El próximo caso de éxito. Uníte a la revolución solar y transformá tu
-                                energía
-                                hoy.</p>
-                            <a href="#contacto" class="btn-link">Empezar Ahora &rarr;</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
     <!-- VALORES (POR QUÉ ELEGIRNOS) -->
     <section id="valores" class="section-padding values">
@@ -1639,25 +1559,7 @@
             </div>
 
             <div class="services-grid">
-                <!-- Servicio 1: Paneles Solares -->
-                <!-- Service 1: Paneles Solares -->
-                <article class="service-card service-panels slide-in-left">
-                    <h3 data-lang="serv_panels_title">Paneles Solares</h3>
-                    <p data-lang="serv_panels_desc">Instalación de paneles fotovoltaicos de alta eficiencia para generar
-                        energía limpia y reducir tu factura eléctrica hasta un 80%.</p>
-                </article>
-
-                <!-- Servicio 2: Calentadores Solares -->
-                <!-- Service 2: Calentadores Solares -->
-                <article class="service-card service-heaters fade-in">
-                    <h3 data-lang="serv_heaters_title">Termotanque Solar</h3>
-                    <p data-lang="serv_heaters_desc">Teniendo en cuenta los costos de calentar agua, el termotanque
-                        solar es la solución más óptima y versátil, no solo por el ahorro económico, sino también por la
-                        posibilidad de tener agua caliente en lugares remotos.</p>
-                </article>
-
-                <!-- Servicio 3: Bombeo Solar -->
-                <!-- Service 3: Bombeo Solar -->
+                <!-- 1. Bombeo Solar -->
                 <article class="service-card service-pumps slide-in-right">
                     <h3 data-lang="serv_pumps_title">Bombeo Solar</h3>
                     <p data-lang="serv_pumps_desc">Contamos con una amplia variedad de bombas solares, según caudal y
@@ -1666,7 +1568,7 @@
                     </p>
                 </article>
 
-                <!-- Servicio 4: Sistemas Fotovoltaicos -->
+                <!-- 2. Sistemas Fotovoltaicos -->
                 <article class="service-card service-photovoltaic slide-in-left">
                     <h3>Sistemas Fotovoltaicos</h3>
                     <div class="service-special-content">
@@ -1682,16 +1584,23 @@
                     </div>
                 </article>
 
-                <!-- Servicio 5: Climatizadores de pileta -->
+                <!-- 3. Termotanque Solar -->
+                <article class="service-card service-heaters fade-in">
+                    <h3 data-lang="serv_heaters_title">Termotanque Solar</h3>
+                    <p data-lang="serv_heaters_desc">Teniendo en cuenta los costos de calentar agua, el termotanque
+                        solar es la solución más óptima y versátil, no solo por el ahorro económico, sino también por la
+                        posibilidad de tener agua caliente en lugares remotos.</p>
+                </article>
+
+                <!-- 4. Climatizadores de Piscinas -->
                 <article class="service-card service-pool-heater fade-in">
-                    <h3>Climatizadores de pileta</h3>
+                    <h3>Climatizadores de Piscinas</h3>
                     <p>Son sistemas para elevar unos grados el agua de tu piscina y poder disfrutarla unos meses más.
                         Ofrecemos distintas opciones según la necesidad del cliente, Bombas de Calor, Colectores de
                         tubos al vacío o Mantas de EPDM.</p>
                 </article>
 
-                <!-- Servicio 6: Asesoría -->
-                <!-- Service 6: Asesoría -->
+                <!-- 5. Asesoría Personalizada -->
                 <article class="service-card service-consulting slide-in-right">
                     <h3 data-lang="serv_consulting_title">Asesoría Personalizada</h3>
                     <p data-lang="serv_consulting_desc">Análisis personalizado de consumo y diseño de sistemas solares
@@ -1703,136 +1612,13 @@
 
 
 
-    <!-- SECCIÓN DE PREGUNTAS FRECUENTES -->
-    <section id="faq" class="section-padding faq">
-        <div class="container">
-            <div class="text-center fade-in">
-                <span class="section-tag">Preguntas Frecuentes</span>
-                <h2 class="section-title">Resolvemos tus dudas</h2>
-            </div>
 
-            <div class="faq-grid fade-in">
-                <!-- item 1 -->
-                <div class="faq-item">
-                    <button class="faq-question">
-                        ¿Cuánto puedo ahorrar realmente en mi factura?
-                        <svg class="chevron" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <polyline points="6 9 12 15 18 9"></polyline>
-                        </svg>
-                    </button>
-                    <div class="faq-answer">
-                        <div class="faq-content">
-                            <p>El ahorro depende de tu consumo actual y la cantidad de paneles instalados, pero
-                                generalmente nuestros clientes reducen entre un <strong>70% y un 90%</strong> de su
-                                factura eléctrica. En tarifas comerciales (Tarifa 2 y 3), el retorno de inversión suele
-                                ser menor a 3 años.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- item 2 -->
-                <div class="faq-item">
-                    <button class="faq-question">
-                        ¿Los paneles funcionan en días nublados o con lluvia?
-                        <svg class="chevron" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <polyline points="6 9 12 15 18 9"></polyline>
-                        </svg>
-                    </button>
-                    <div class="faq-answer">
-                        <div class="faq-content">
-                            <p>Sí, los paneles solares fotovoltaicos funcionan con la radiación solar, no solo con la
-                                luz
-                                directa. Aunque la producción disminuye en días muy nublados (un 10-25% de su
-                                capacidad),
-                                siguen generando energía. La lluvia incluso ayuda a mantenerlos limpios.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- item 3 -->
-                <div class="faq-item">
-                    <button class="faq-question">
-                        ¿Cuánto tiempo tarda la instalación?
-                        <svg class="chevron" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <polyline points="6 9 12 15 18 9"></polyline>
-                        </svg>
-                    </button>
-                    <div class="faq-answer">
-                        <div class="faq-content">
-                            <p>Una instalación residencial típica se completa en <strong>1 o 2 días</strong>. Proyectos
-                                comerciales más grandes pueden tomar de 3 a 5 días. Nos encargamos de todo el proceso,
-                                incluyendo permisos y trámites con la compañía eléctrica.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- item 4 -->
-                <div class="faq-item">
-                    <button class="faq-question">
-                        ¿Qué mantenimiento requiere el sistema?
-                        <svg class="chevron" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <polyline points="6 9 12 15 18 9"></polyline>
-                        </svg>
-                    </button>
-                    <div class="faq-answer">
-                        <div class="faq-content">
-                            <p>Muy poco. Al no tener partes móviles, el mantenimiento es mínimo. Recomendamos una
-                                <strong>limpieza anual</strong> de los paneles (solo con agua) para asegurar máxima
-                                eficiencia, y una revisión general de conexiones cada 2-3 años.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- item 5 -->
-                <div class="faq-item">
-                    <button class="faq-question">
-                        ¿Qué garantía tienen los equipos?
-                        <svg class="chevron" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <polyline points="6 9 12 15 18 9"></polyline>
-                        </svg>
-                    </button>
-                    <div class="faq-answer">
-                        <div class="faq-content">
-                            <p>Ofrecemos garantías líderes en el mercado: <strong>25 años de garantía de
-                                    rendimiento</strong>
-                                en los paneles solares y 10 años en inversores. Nuestra instalación también cuenta con
-                                garantía de mano de obra por 5 años.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- item 6 -->
-                <div class="faq-item">
-                    <button class="faq-question">
-                        ¿Mi techo es apto para paneles solares?
-                        <svg class="chevron" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <polyline points="6 9 12 15 18 9"></polyline>
-                        </svg>
-                    </button>
-                    <div class="faq-answer">
-                        <div class="faq-content">
-                            <p>La mayoría de los techos son aptos (concreto, teja, lámina). Realizamos un estudio
-                                estructural preliminar sin costo para asegurar la viabilidad. Si el techo no es ideal,
-                                también diseñamos estructuras para instalación en suelo (tipo pérgola o carport).</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
     <!-- PIE DE PÁGINA -->
     <footer id="contacto">
         <div class="container">
             <div class="footer-grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));">
-                <div class="footer-col">
+                <div class="footer-col contact-card">
                     <a href="#" class="logo" style="margin-bottom: 1rem; display:block;">
                         <img src="logo-dark.png" alt="Solar GT" class="footer-logo-img">
                     </a>
@@ -1906,28 +1692,8 @@
     <!-- JAVASCRIPT -->
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            // Video Sequence Logic
-            const vid1 = document.getElementById('hero-vid-1');
-            const vid2 = document.getElementById('hero-vid-2');
-
-            // Handle transition from Vid 1 to Vid 2
-            vid1.addEventListener('ended', () => {
-                vid2.currentTime = 0;
-                vid2.play();
-                vid1.classList.remove('active');
-                vid2.classList.add('active');
-            });
-
-            // Handle transition from Vid 2 back to Vid 1
-            vid2.addEventListener('ended', () => {
-                vid1.currentTime = 0;
-                vid1.play();
-                vid2.classList.remove('active');
-                vid1.classList.add('active');
-            });
-
-            // Ensure first video is playing
-            vid1.play().catch(e => console.log("Autoplay prevented:", e));
+            // Video Logic
+            // Single video loops automatically via HTML attribute
 
             // Alternar Menú Móvil
             const mobileToggle = document.querySelector('.mobile-toggle');
@@ -2025,11 +1791,10 @@
         const translations = {
             es: {
                 nav_home: "Inicio", nav_about: "Nosotros", nav_values: "Valores", nav_services: "Soluciones", nav_contact: "Contacto",
-                hero_title: "Impulsamos la transición energética <br> con soluciones solares eficaces y rentables",
-                hero_subtitle: "Solar GT, una empresa dedicada a dar soluciones fotovoltaicas y térmicas de alto rendimiento para el campo, la industria, el comercio y el hogar.",
+                hero_title: "Solar GT, impulsando la transición energética",
+                hero_subtitle: "Empresa de energía solar, dedicada a dar soluciones fotovoltaicas y térmicas de alto rendimiento para el campo, la industria, el comercio y el hogar",
                 hero_cta1: "Ver Soluciones", hero_cta2: "Contacto",
                 counter_years: "Más de 8 años de experiencia", counter_projects: "Más de 65 proyectos terminados", counter_mwh: "Más de 90 KWh instalados", counter_clients: "100 % clientes satisfechos",
-                serv_panels_title: "Paneles Solares", serv_panels_desc: "Instalación de paneles fotovoltaicos de alta eficiencia para generar energía limpia y reducir tu factura eléctrica hasta un 80%.",
                 serv_heaters_title: "Calentadores Solares", serv_heaters_desc: "Sistemas de calentamiento de agua con energía solar para hogares y empresas, ahorrando gas y electricidad todo el año.",
                 serv_pumps_title: "Bombeo Solar", serv_pumps_desc: "Soluciones de bombeo de agua alimentadas por energía solar, ideales para agricultura, ganadería y zonas rurales.",
                 serv_storage_title: "Almacenamiento de Energía", serv_storage_desc: "Baterías de litio de última generación para almacenar energía y garantizar suministro continuo día y noche.",
@@ -2041,11 +1806,10 @@
             },
             en: {
                 nav_home: "Home", nav_about: "About Us", nav_values: "Values", nav_services: "Solutions", nav_contact: "Contact",
-                hero_title: "Powering the Energy of the Future Today",
-                hero_subtitle: "Experts in high-performance photovoltaic and thermal solutions for rural, industrial, and commercial sectors.",
+                hero_title: "Solar GT, powering the energy transition",
+                hero_subtitle: "Solar energy company, dedicated to providing high-performance photovoltaic and thermal solutions for the field, industry, commerce, and home",
                 hero_cta1: "View Solutions", hero_cta2: "Learn More",
                 counter_years: "Years of Experience", counter_projects: "Projects Completed", counter_mwh: "MWh Generated", counter_clients: "Satisfied Clients",
-                serv_panels_title: "Solar Panels", serv_panels_desc: "Installation of high-efficiency photovoltaic panels to generate clean energy and reduce your electricity bill by up to 80%.",
                 serv_heaters_title: "Solar Heaters", serv_heaters_desc: "Solar water heating systems for homes and businesses, saving gas and electricity all year round.",
                 serv_pumps_title: "Solar Pumping", serv_pumps_desc: "Solar-powered water pumping solutions, ideal for agriculture, livestock, and rural areas.",
                 serv_storage_title: "Energy Storage", serv_storage_desc: "Last-generation lithium batteries to store energy and ensure continuous supply day and night.",
@@ -2139,44 +1903,9 @@
                 bgDefault.classList.add('active');
             });
         });
-        // 6. Team Carousel Infinite Loop
-        const teamTrack = document.querySelector('.team-track');
-        // Clone all cards to create infinite effect
-        if (teamTrack) {
-            const cards = Array.from(teamTrack.children);
-            cards.forEach(card => {
-                const clone = card.cloneNode(true);
-                teamTrack.appendChild(clone);
-            });
-        }
 
-        // 7. FAQ Accordion
-        const faqQuestions = document.querySelectorAll('.faq-question');
 
-        faqQuestions.forEach(question => {
-            question.addEventListener('click', () => {
-                const item = question.parentElement;
-                const answer = item.querySelector('.faq-answer');
 
-                // Toggle active class
-                const isActive = item.classList.contains('active');
-
-                // Close others (optional - removing for "independent" behavior as planned)
-                // document.querySelectorAll('.faq-item').forEach(i => {
-                //     i.classList.remove('active');
-                //     i.querySelector('.faq-answer').style.maxHeight = null;
-                // });
-
-                if (isActive) {
-                    item.classList.remove('active');
-                    answer.style.maxHeight = null;
-                } else {
-                    item.classList.add('active');
-                    // Set max-height to scrollHeight to animate correctly
-                    answer.style.maxHeight = answer.scrollHeight + "px";
-                }
-            });
-        });
     </script>
 </body>
 
