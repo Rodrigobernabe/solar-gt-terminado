@@ -8,7 +8,7 @@
         content="Solar GT - Soluciones integrales de energía solar fotovoltaica y térmica para entornos rurales, industriales y comerciales. Innovación y calidad certificada.">
     <title>Solar GT | Impulsando la Energía del Futuro</title>
 
-    <!-- Google Fonts: Inter (Similar to Circular) -->
+    <!-- Fuentes de Google: Inter (Similar a Circular) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
@@ -45,7 +45,7 @@
             /* Azul */
             --color-primary-light: #246192;
             --color-accent: #cbb03b;
-            /* Orange */
+            /* Naranja */
             --color-accent-hover: #b39b32;
             --color-text: #1f2937;
             --color-text-light: #6b7280;
@@ -434,9 +434,9 @@
             background-color: var(--color-primary);
             color: #ffffff;
             padding: 3rem 0;
-            /* Adjusted padding */
+            /* Relleno ajustado */
             margin-bottom: 3rem;
-            /* Add spacing between Hero Counters and About */
+            /* Añadir espaciado entre Contadores del Hero y Nosotros */
         }
 
         .counters-grid {
@@ -535,7 +535,7 @@
         .value-card {
             flex: 1 1 300px;
             max-width: 450px;
-            /* Optional constraint to keep them looking like cards */
+            /* Restricción opcional para mantener aspecto de tarjeta */
             background: var(--color-card-bg);
             padding: 2.5rem;
             border-radius: var(--border-radius);
@@ -651,7 +651,7 @@
 
         .service-icon {
             display: none;
-            /* Removed as requested */
+            /* Eliminado según solicitud */
         }
 
         .service-card:hover {
@@ -1313,9 +1313,110 @@
             opacity: 1;
             transform: translate(0);
         }
+
+        .brand-showcase {
+            background: var(--color-bg-alt);
+            padding: 3rem 0;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .brand-showcase::before,
+        .brand-showcase::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            width: 15%;
+            height: 100%;
+            z-index: 2;
+            pointer-events: none;
+        }
+
+        .brand-showcase::before {
+            left: 0;
+            background: linear-gradient(to right, var(--color-bg-alt), transparent);
+        }
+
+        .brand-showcase::after {
+            right: 0;
+            background: linear-gradient(to left, var(--color-bg-alt), transparent);
+        }
+
+        .slider {
+            margin: auto;
+            overflow: hidden;
+            position: relative;
+            width: 100%;
+        }
+
+        .slide-track {
+            display: flex;
+            width: calc(200px * 38);
+            animation: scroll 60s linear infinite;
+        }
+
+        .slide-track:hover {
+            animation-play-state: paused;
+        }
+
+        .slide {
+            width: 200px;
+            padding: 0 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .slide img {
+            max-width: 100%;
+            max-height: 80px;
+            filter: grayscale(100%);
+            opacity: 0.6;
+            transition: all 0.3s ease;
+            object-fit: contain;
+        }
+
+        .slide img:hover {
+            filter: grayscale(0%);
+            opacity: 1;
+            transform: scale(1.1);
+        }
+
+        @keyframes scroll {
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(calc(-200px * 19));
+            }
+        }
+
+        /* Ajustes responsivos */
+        @media (max-width: 768px) {
+            .slide {
+                width: 120px;
+                padding: 0 1rem;
+            }
+
+            .slide-track {
+                width: calc(120px * 38);
+            }
+
+            @keyframes scroll {
+                0% {
+                    transform: translateX(0);
+                }
+
+                100% {
+                    transform: translateX(calc(-120px * 19));
+                }
+            }
+        }
     </style>
 
-    <!-- Structured Data for Local Business -->
+    <!-- Datos Estructurados para Negocio Local -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -1614,6 +1715,53 @@
 
 
 
+    <!-- CLUSTER DE MARCAS -->
+    <section class="brand-showcase">
+        <div class="slider">
+            <div class="slide-track">
+                <!-- 18 Imágenes Originales -->
+                <div class="slide"><img src="marcas/png/Asset-1-1.png" alt="Marca 1"></div>
+                <div class="slide"><img src="marcas/png/descarga (1).png" alt="Marca 2"></div>
+                <div class="slide"><img src="marcas/png/descarga (2).png" alt="Marca 3"></div>
+                <div class="slide"><img src="marcas/png/descarga (3).png" alt="Marca 4"></div>
+                <div class="slide"><img src="marcas/png/descarga (4).png" alt="Marca 5"></div>
+                <div class="slide"><img src="marcas/png/descarga (5).png" alt="Marca 6"></div>
+                <div class="slide"><img src="marcas/png/descarga (6).png" alt="Marca 7"></div>
+                <div class="slide"><img src="marcas/png/descarga (7).png" alt="Marca 8"></div>
+                <div class="slide"><img src="marcas/png/descarga (8).png" alt="Marca 9"></div>
+                <div class="slide"><img src="marcas/png/descarga (9).png" alt="Marca 10"></div>
+                <div class="slide"><img src="marcas/png/descarga (10).png" alt="Marca 11"></div>
+                <div class="slide"><img src="marcas/png/descarga (11).png" alt="Marca 12"></div>
+                <div class="slide"><img src="marcas/png/descarga (12).png" alt="Marca 13"></div>
+                <div class="slide"><img src="marcas/png/descarga (13).png" alt="Marca 14"></div>
+                <div class="slide"><img src="marcas/png/descarga (14).png" alt="Marca 15"></div>
+                <div class="slide"><img src="marcas/png/descarga (15).png" alt="Marca 16"></div>
+                <div class="slide"><img src="marcas/png/descarga (16).png" alt="Marca 17"></div>
+                <div class="slide"><img src="marcas/png/descarga.png" alt="Marca 18"></div>
+
+                <!-- Duplicado para Bucle -->
+                <div class="slide"><img src="marcas/png/Asset-1-1.png" alt="Marca 1"></div>
+                <div class="slide"><img src="marcas/png/descarga (1).png" alt="Marca 2"></div>
+                <div class="slide"><img src="marcas/png/descarga (2).png" alt="Marca 3"></div>
+                <div class="slide"><img src="marcas/png/descarga (3).png" alt="Marca 4"></div>
+                <div class="slide"><img src="marcas/png/descarga (4).png" alt="Marca 5"></div>
+                <div class="slide"><img src="marcas/png/descarga (5).png" alt="Marca 6"></div>
+                <div class="slide"><img src="marcas/png/descarga (6).png" alt="Marca 7"></div>
+                <div class="slide"><img src="marcas/png/descarga (7).png" alt="Marca 8"></div>
+                <div class="slide"><img src="marcas/png/descarga (8).png" alt="Marca 9"></div>
+                <div class="slide"><img src="marcas/png/descarga (9).png" alt="Marca 10"></div>
+                <div class="slide"><img src="marcas/png/descarga (10).png" alt="Marca 11"></div>
+                <div class="slide"><img src="marcas/png/descarga (11).png" alt="Marca 12"></div>
+                <div class="slide"><img src="marcas/png/descarga (12).png" alt="Marca 13"></div>
+                <div class="slide"><img src="marcas/png/descarga (13).png" alt="Marca 14"></div>
+                <div class="slide"><img src="marcas/png/descarga (14).png" alt="Marca 15"></div>
+                <div class="slide"><img src="marcas/png/descarga (15).png" alt="Marca 16"></div>
+                <div class="slide"><img src="marcas/png/descarga (16).png" alt="Marca 17"></div>
+                <div class="slide"><img src="marcas/png/descarga.png" alt="Marca 18"></div>
+            </div>
+        </div>
+    </section>
+
     <!-- PIE DE PÁGINA -->
     <footer id="contacto">
         <div class="container">
@@ -1692,8 +1840,8 @@
     <!-- JAVASCRIPT -->
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            // Video Logic
-            // Single video loops automatically via HTML attribute
+            // Lógica de Video
+            // Video único se repite automáticamente vía atributo HTML
 
             // Alternar Menú Móvil
             const mobileToggle = document.querySelector('.mobile-toggle');
@@ -1836,7 +1984,7 @@
             });
         }
 
-        // 3. Counter Animation
+        // 3. Animación de Contadores
         const counters = document.querySelectorAll('.counter-value');
         const speed = 100;
 
@@ -1867,7 +2015,7 @@
         const counterObserver = new IntersectionObserver(animateCounters, { threshold: 0.5 });
         counters.forEach(counter => counterObserver.observe(counter));
 
-        // 4. Hero Carousel
+        // 4. Carrusel del Hero
         const slides = document.querySelectorAll('.carousel-slide');
         let currentSlide = 0;
 
@@ -1877,10 +2025,10 @@
             slides[currentSlide].classList.add('active');
         }
 
-        // Auto advance every 5 seconds
+        // Avance automático cada 5 segundos
         setInterval(nextSlide, 5000);
 
-        // 5. Values Background Hover Effect
+        // 5. Efecto Hover en Fondo de Valores
         const valueCards = document.querySelectorAll('.value-card[data-bg]');
         const bgDefault = document.getElementById('bg-default');
 
@@ -1889,16 +2037,16 @@
                 const bgId = card.getAttribute('data-bg');
                 const bgElement = document.getElementById(bgId);
 
-                // Hide all BGs
+                // Ocultar todos los fondos
                 document.querySelectorAll('.values-bg').forEach(bg => bg.classList.remove('active'));
 
-                // Show target BG
+                // Mostrar fondo objetivo
                 if (bgElement) bgElement.classList.add('active');
             });
 
             card.addEventListener('mouseleave', () => {
-                // Return to default (or maybe keep last? User said "on hover change", implies return or stay. 
-                // Let's stay for smoother feel, or return to default. Let's return to default for now)
+                // Volver al predeterminado (o quizás mantener el último? El usuario dijo "cambiar al pasar el cursor", implica volver o quedarse. 
+                // Quedémonos para una sensación más suave, o volvamos al predeterminado. Volvamos al predeterminado por ahora)
                 document.querySelectorAll('.values-bg').forEach(bg => bg.classList.remove('active'));
                 bgDefault.classList.add('active');
             });
