@@ -414,11 +414,22 @@
             opacity: 0.9;
         }
 
-        .hero-logo {
-            max-width: 250px;
-            height: auto;
-            margin: 0 auto 2rem auto;
-            display: block;
+        /* Logo como marca de agua gigante */
+        .hero-watermark {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 70vw;
+            /* Más grande */
+            max-width: 1000px;
+            min-width: 300px;
+            opacity: 0.4;
+            /* Más visible */
+            z-index: 2;
+            /* Video es 1, Overlay es 2 (cambiaremos overlay a 1 o logo a 2 depend dom), Content es 3 */
+            pointer-events: none;
+            filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.1));
         }
 
         .hero-btns {
@@ -1500,9 +1511,11 @@
             </video>
         </div>
         <div class="hero-overlay"></div>
+        <!-- Logo Marca de Agua (Entre Video y Texto) -->
+        <img src="logo.png" alt="Solar GT Logo" class="hero-watermark">
+
         <div class="container">
             <div class="hero-content fade-in">
-                <img src="logo.png" alt="Solar GT Logo" class="hero-logo">
                 <h1 data-lang="hero_title">Impulsando la transición energética</h1>
                 <p data-lang="hero_subtitle">Solar GT es una empresa de energía solar, dedicada a dar soluciones
                     fotovoltaicas y
