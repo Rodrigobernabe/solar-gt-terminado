@@ -11,7 +11,9 @@
     <!-- Fuentes de Google: Inter (Similar a Circular) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&family=Kanit:wght@800&display=swap"
+        rel="stylesheet">
 
     <!-- Favicon -->
     <link rel="icon" href="logo-favicon.png" type="image/png">
@@ -401,6 +403,7 @@
         }
 
         .hero h1 {
+            font-family: 'Kanit', sans-serif;
             font-size: var(--text-hero);
             line-height: 1.1;
             margin-bottom: 1.5rem;
@@ -1445,9 +1448,22 @@
       "description": "Soluciones de energía solar fotovoltaica y térmica para entornos rurales, industriales y comerciales.",
       "address": {
         "@type": "PostalAddress",
-        "addressLocality": "Argentina",
+        "streetAddress": "Villa Mercedes",
+        "addressLocality": "Villa Mercedes",
+        "addressRegion": "San Luis",
+        "postalCode": "5730",
         "addressCountry": "AR"
       },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -33.675,
+        "longitude": -65.458
+      },
+      "telephone": "+5492657326148",
+      "sameAs": [
+        "https://www.instagram.com/solargtvm/",
+        "https://www.facebook.com/solargtvm"
+      ],
       "priceRange": "$$$",
       "openingHours": "Mo-Fr 08:00-18:00"
     }
@@ -1493,7 +1509,8 @@
                         <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
                     </svg>
                 </button>
-                <button id="lang-toggle" class="icon-btn" style="font-size: 0.9rem; font-weight: 700;">EN</button>
+                <button id="lang-toggle" class="icon-btn" style="font-size: 0.9rem; font-weight: 700;"
+                    aria-label="Cambiar idioma">EN</button>
             </div>
             <div class="mobile-toggle" aria-label="Abrir menú">
                 <span class="bar"></span>
@@ -1512,7 +1529,7 @@
         </div>
         <div class="hero-overlay"></div>
         <!-- Logo Marca de Agua (Entre Video y Texto) -->
-        <img src="logo.png" alt="Solar GT Logo" class="hero-watermark">
+        <img src="logo.png" alt="Solar GT - Energía Solar en San Luis" class="hero-watermark">
 
         <div class="container">
             <div class="hero-content fade-in">
@@ -1600,7 +1617,8 @@
                 </div>
                 <div class="about-image slide-out-right" style="min-height: 400px; height: 100%;">
                     <!-- Usando imagen de equipo subida -->
-                    <img src="SolarGtNosotros.png" alt="Equipo de técnicos de Solar GT" loading="lazy"
+                    <img src="SolarGtNosotros.png" alt="Equipo de instaladores de paneles solares Solar GT en San Luis"
+                        loading="lazy"
                         style="width: 100%; height: 100%; object-fit: cover; border-radius: var(--border-radius);">
                 </div>
             </div>
@@ -1684,7 +1702,7 @@
             <div class="services-grid">
                 <!-- 1. Bombeo Solar -->
                 <article class="service-card service-pumps slide-in-right">
-                    <h3 data-lang="serv_pumps_title">Bombeo Solar</h3>
+                    <h3 data-lang="serv_pumps_title">Instalación de Bombeo Solar para Agro</h3>
                     <p data-lang="serv_pumps_desc">Contamos con una amplia variedad de bombas solares, según caudal y
                         profundidad requerida y la posibilidad de solarizar bombas que no son solares, cubriendo la
                         necesidad de nuestros clientes, simplificando la extracción de agua de la manera más eficiente.
@@ -1693,7 +1711,7 @@
 
                 <!-- 2. Sistemas Fotovoltaicos -->
                 <article class="service-card service-photovoltaic slide-in-left">
-                    <h3>Sistemas Fotovoltaicos</h3>
+                    <h3>Instalación de Paneles Solares (On Grid / Off Grid)</h3>
                     <div class="service-special-content">
                         <ul style="list-style-type: none; padding-left: 0;">
                             <li style="margin-bottom: 0.5rem;"><strong>• Sistemas Off Grid:</strong> Ideal para zonas
@@ -1709,7 +1727,7 @@
 
                 <!-- 3. Termotanque Solar -->
                 <article class="service-card service-heaters fade-in">
-                    <h3 data-lang="serv_heaters_title">Termotanque Solar</h3>
+                    <h3 data-lang="serv_heaters_title">Venta de Termotanques Solares</h3>
                     <p data-lang="serv_heaters_desc">Teniendo en cuenta los costos de calentar agua, el termotanque
                         solar es la solución más óptima y versátil, no solo por el ahorro económico, sino también por la
                         posibilidad de tener agua caliente en lugares remotos.</p>
@@ -1742,44 +1760,80 @@
         <div class="slider">
             <div class="slide-track">
                 <!-- 18 Imágenes Originales -->
-                <div class="slide"><img src="marcas/png/Asset-1-1.png" alt="Marca 1"></div>
-                <div class="slide"><img src="marcas/png/descarga (1).png" alt="Marca 2"></div>
-                <div class="slide"><img src="marcas/png/descarga (2).png" alt="Marca 3"></div>
-                <div class="slide"><img src="marcas/png/descarga (3).png" alt="Marca 4"></div>
-                <div class="slide"><img src="marcas/png/descarga (4).png" alt="Marca 5"></div>
-                <div class="slide"><img src="marcas/png/descarga (5).png" alt="Marca 6"></div>
-                <div class="slide"><img src="marcas/png/descarga (6).png" alt="Marca 7"></div>
-                <div class="slide"><img src="marcas/png/descarga (7).png" alt="Marca 8"></div>
-                <div class="slide"><img src="marcas/png/descarga (8).png" alt="Marca 9"></div>
-                <div class="slide"><img src="marcas/png/descarga (9).png" alt="Marca 10"></div>
-                <div class="slide"><img src="marcas/png/descarga (10).png" alt="Marca 11"></div>
-                <div class="slide"><img src="marcas/png/descarga (11).png" alt="Marca 12"></div>
-                <div class="slide"><img src="marcas/png/descarga (12).png" alt="Marca 13"></div>
-                <div class="slide"><img src="marcas/png/descarga (13).png" alt="Marca 14"></div>
-                <div class="slide"><img src="marcas/png/descarga (14).png" alt="Marca 15"></div>
-                <div class="slide"><img src="marcas/png/descarga (15).png" alt="Marca 16"></div>
-                <div class="slide"><img src="marcas/png/descarga (16).png" alt="Marca 17"></div>
-                <div class="slide"><img src="marcas/png/descarga.png" alt="Marca 18"></div>
+                <div class="slide"><img src="marcas/png/Asset-1-1.png" alt="Marca aliada de tecnología solar 1"
+                        loading="lazy"></div>
+                <div class="slide"><img src="marcas/png/descarga (1).png" alt="Marca aliada de tecnología solar 2"
+                        loading="lazy"></div>
+                <div class="slide"><img src="marcas/png/descarga (2).png" alt="Marca aliada de tecnología solar 3"
+                        loading="lazy"></div>
+                <div class="slide"><img src="marcas/png/descarga (3).png" alt="Marca aliada de tecnología solar 4"
+                        loading="lazy"></div>
+                <div class="slide"><img src="marcas/png/descarga (4).png" alt="Marca aliada de tecnología solar 5"
+                        loading="lazy"></div>
+                <div class="slide"><img src="marcas/png/descarga (5).png" alt="Marca aliada de tecnología solar 6"
+                        loading="lazy"></div>
+                <div class="slide"><img src="marcas/png/descarga (6).png" alt="Marca aliada de tecnología solar 7"
+                        loading="lazy"></div>
+                <div class="slide"><img src="marcas/png/descarga (7).png" alt="Marca aliada de tecnología solar 8"
+                        loading="lazy"></div>
+                <div class="slide"><img src="marcas/png/descarga (8).png" alt="Marca aliada de tecnología solar 9"
+                        loading="lazy"></div>
+                <div class="slide"><img src="marcas/png/descarga (9).png" alt="Marca aliada de tecnología solar 10"
+                        loading="lazy"></div>
+                <div class="slide"><img src="marcas/png/descarga (10).png" alt="Marca aliada de tecnología solar 11"
+                        loading="lazy"></div>
+                <div class="slide"><img src="marcas/png/descarga (11).png" alt="Marca aliada de tecnología solar 12"
+                        loading="lazy"></div>
+                <div class="slide"><img src="marcas/png/descarga (12).png" alt="Marca aliada de tecnología solar 13"
+                        loading="lazy"></div>
+                <div class="slide"><img src="marcas/png/descarga (13).png" alt="Marca aliada de tecnología solar 14"
+                        loading="lazy"></div>
+                <div class="slide"><img src="marcas/png/descarga (14).png" alt="Marca aliada de tecnología solar 15"
+                        loading="lazy"></div>
+                <div class="slide"><img src="marcas/png/descarga (15).png" alt="Marca aliada de tecnología solar 16"
+                        loading="lazy"></div>
+                <div class="slide"><img src="marcas/png/descarga (16).png" alt="Marca aliada de tecnología solar 17"
+                        loading="lazy"></div>
+                <div class="slide"><img src="marcas/png/descarga.png" alt="Marca aliada de tecnología solar 18"
+                        loading="lazy"></div>
 
                 <!-- Duplicado para Bucle -->
-                <div class="slide"><img src="marcas/png/Asset-1-1.png" alt="Marca 1"></div>
-                <div class="slide"><img src="marcas/png/descarga (1).png" alt="Marca 2"></div>
-                <div class="slide"><img src="marcas/png/descarga (2).png" alt="Marca 3"></div>
-                <div class="slide"><img src="marcas/png/descarga (3).png" alt="Marca 4"></div>
-                <div class="slide"><img src="marcas/png/descarga (4).png" alt="Marca 5"></div>
-                <div class="slide"><img src="marcas/png/descarga (5).png" alt="Marca 6"></div>
-                <div class="slide"><img src="marcas/png/descarga (6).png" alt="Marca 7"></div>
-                <div class="slide"><img src="marcas/png/descarga (7).png" alt="Marca 8"></div>
-                <div class="slide"><img src="marcas/png/descarga (8).png" alt="Marca 9"></div>
-                <div class="slide"><img src="marcas/png/descarga (9).png" alt="Marca 10"></div>
-                <div class="slide"><img src="marcas/png/descarga (10).png" alt="Marca 11"></div>
-                <div class="slide"><img src="marcas/png/descarga (11).png" alt="Marca 12"></div>
-                <div class="slide"><img src="marcas/png/descarga (12).png" alt="Marca 13"></div>
-                <div class="slide"><img src="marcas/png/descarga (13).png" alt="Marca 14"></div>
-                <div class="slide"><img src="marcas/png/descarga (14).png" alt="Marca 15"></div>
-                <div class="slide"><img src="marcas/png/descarga (15).png" alt="Marca 16"></div>
-                <div class="slide"><img src="marcas/png/descarga (16).png" alt="Marca 17"></div>
-                <div class="slide"><img src="marcas/png/descarga.png" alt="Marca 18"></div>
+                <div class="slide"><img src="marcas/png/Asset-1-1.png" alt="Marca aliada de tecnología solar 1"
+                        loading="lazy"></div>
+                <div class="slide"><img src="marcas/png/descarga (1).png" alt="Marca aliada de tecnología solar 2"
+                        loading="lazy"></div>
+                <div class="slide"><img src="marcas/png/descarga (2).png" alt="Marca aliada de tecnología solar 3"
+                        loading="lazy"></div>
+                <div class="slide"><img src="marcas/png/descarga (3).png" alt="Marca aliada de tecnología solar 4"
+                        loading="lazy"></div>
+                <div class="slide"><img src="marcas/png/descarga (4).png" alt="Marca aliada de tecnología solar 5"
+                        loading="lazy"></div>
+                <div class="slide"><img src="marcas/png/descarga (5).png" alt="Marca aliada de tecnología solar 6"
+                        loading="lazy"></div>
+                <div class="slide"><img src="marcas/png/descarga (6).png" alt="Marca aliada de tecnología solar 7"
+                        loading="lazy"></div>
+                <div class="slide"><img src="marcas/png/descarga (7).png" alt="Marca aliada de tecnología solar 8"
+                        loading="lazy"></div>
+                <div class="slide"><img src="marcas/png/descarga (8).png" alt="Marca aliada de tecnología solar 9"
+                        loading="lazy"></div>
+                <div class="slide"><img src="marcas/png/descarga (9).png" alt="Marca aliada de tecnología solar 10"
+                        loading="lazy"></div>
+                <div class="slide"><img src="marcas/png/descarga (10).png" alt="Marca aliada de tecnología solar 11"
+                        loading="lazy"></div>
+                <div class="slide"><img src="marcas/png/descarga (11).png" alt="Marca aliada de tecnología solar 12"
+                        loading="lazy"></div>
+                <div class="slide"><img src="marcas/png/descarga (12).png" alt="Marca aliada de tecnología solar 13"
+                        loading="lazy"></div>
+                <div class="slide"><img src="marcas/png/descarga (13).png" alt="Marca aliada de tecnología solar 14"
+                        loading="lazy"></div>
+                <div class="slide"><img src="marcas/png/descarga (14).png" alt="Marca aliada de tecnología solar 15"
+                        loading="lazy"></div>
+                <div class="slide"><img src="marcas/png/descarga (15).png" alt="Marca aliada de tecnología solar 16"
+                        loading="lazy"></div>
+                <div class="slide"><img src="marcas/png/descarga (16).png" alt="Marca aliada de tecnología solar 17"
+                        loading="lazy"></div>
+                <div class="slide"><img src="marcas/png/descarga.png" alt="Marca aliada de tecnología solar 18"
+                        loading="lazy"></div>
             </div>
         </div>
     </section>
@@ -1789,7 +1843,7 @@
         <div class="container">
             <div class="footer-grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));">
                 <div class="footer-col contact-card">
-                    <a href="#" class="logo" style="margin-bottom: 1rem; display:block;">
+                    <a href="/" class="logo" style="margin-bottom: 1rem; display:block;">
                         <img src="logo-dark.png" alt="Solar GT" class="footer-logo-img">
                     </a>
                     <p style="margin-bottom: 2rem;">Energía que impulsa el futuro.</p>
