@@ -541,12 +541,6 @@
             border: 1px solid var(--color-border);
         }
 
-        .value-card:hover {
-            transform: translateY(-10px);
-            box-shadow: var(--shadow-hover);
-            border-bottom-color: var(--color-accent);
-        }
-
         .value-icon {
             font-size: 2.5rem;
             color: var(--color-primary);
@@ -691,77 +685,16 @@
             opacity: 1;
         }
 
-        /* Transición de Fondo de Valores */
         .values {
-            position: relative;
-            background: transparent;
-            z-index: 1;
-            /* Eliminar fondo por defecto para ver la capa de transición */
-        }
-
-        .values-bg-container {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: -1;
-            overflow: hidden;
-            background-color: var(--color-bg-alt);
-            /* Respaldo por defecto */
-        }
-
-        .values-bg {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-size: cover;
-            background-position: center;
-            opacity: 0;
-            transition: opacity 0.5s ease;
-        }
-
-        .values-bg.active {
-            opacity: 1;
-        }
-
-        .values-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(15, 23, 42, 0.85);
-            /* Superposición oscura para hacer el texto legible */
-            z-index: 1;
-        }
-
-        /* Actualizar Tarjeta de Valores para este nuevo diseño */
-        .values .value-card {
-            background: rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(5px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            color: #ffffff;
-        }
-
-        .values .value-card p {
-            color: rgba(255, 255, 255, 0.8);
-        }
-
-        .values .value-card h3 {
-            color: var(--color-accent);
-        }
-
-        .values .section-tag {
-            color: var(--color-accent);
-            z-index: 2;
+            background-color: #313849;
         }
 
         .values .section-title {
             color: #ffffff;
-            z-index: 2;
+        }
+
+        .values .section-tag {
+            color: var(--color-accent);
         }
 
         /* Imágenes de Fondo Específicas para Servicios */
@@ -1605,23 +1538,7 @@
 
     <!-- VALORES (POR QUÉ ELEGIRNOS) -->
     <section id="valores" class="section-padding values">
-        <!-- Contenedor de Fondo Dinámico -->
-        <div class="values-bg-container">
-            <div class="values-bg active" id="bg-default"></div>
-            <div class="values-bg" id="bg-experience" style="background-image: url('Paneles 2.jpg');">
-            </div>
-            <div class="values-bg" id="bg-advice"
-                style="background-image: url('https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=2070&auto=format&fit=crop');">
-            </div>
-            <div class="values-bg" id="bg-install" style="background-image: url('install.jpg');">
-            </div>
-            <div class="values-bg" id="bg-tech" style="background-image: url('Paneles 1.jpg');">
-            </div>
-            <div class="values-bg" id="bg-post-sale"
-                style="background-image: url('https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=1974&auto=format&fit=crop');">
-            </div>
-            <div class="values-overlay"></div>
-        </div>
+
 
         <div class="container" style="position: relative; z-index: 2;">
             <div class="text-center fade-in">
@@ -2079,32 +1996,6 @@
 
         // Avance automático cada 5 segundos
         setInterval(nextSlide, 5000);
-
-        // 5. Efecto Hover en Fondo de Valores
-        const valueCards = document.querySelectorAll('.value-card[data-bg]');
-        const bgDefault = document.getElementById('bg-default');
-
-        valueCards.forEach(card => {
-            card.addEventListener('mouseenter', () => {
-                const bgId = card.getAttribute('data-bg');
-                const bgElement = document.getElementById(bgId);
-
-                // Ocultar todos los fondos
-                document.querySelectorAll('.values-bg').forEach(bg => bg.classList.remove('active'));
-
-                // Mostrar fondo objetivo
-                if (bgElement) bgElement.classList.add('active');
-            });
-
-            card.addEventListener('mouseleave', () => {
-                // Volver al predeterminado (o quizás mantener el último? El usuario dijo "cambiar al pasar el cursor", implica volver o quedarse. 
-                // Quedémonos para una sensación más suave, o volvamos al predeterminado. Volvamos al predeterminado por ahora)
-                document.querySelectorAll('.values-bg').forEach(bg => bg.classList.remove('active'));
-                bgDefault.classList.add('active');
-            });
-        });
-
-
 
     </script>
 </body>
