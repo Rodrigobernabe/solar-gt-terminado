@@ -529,7 +529,8 @@
         }
 
         .value-card {
-            flex: 1 1 300px;
+            flex: 1 1 100%;
+            min-width: min(100%, 250px);
             max-width: 450px;
             /* Restricción opcional para mantener aspecto de tarjeta */
             background: var(--color-card-bg);
@@ -1000,6 +1001,40 @@
             .hero-logo {
                 max-width: 180px;
                 margin-bottom: 1.5rem;
+            }
+
+            .contact-card {
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: flex-end;
+                height: auto;
+                min-height: 350px;
+                padding: 1.5rem;
+                gap: 1rem;
+            }
+
+            .value-card,
+            .service-card {
+                padding: 1.5rem;
+            }
+
+            .hero-btns {
+                flex-direction: column;
+                width: 100%;
+            }
+
+            .hero-btns .btn {
+                width: 100%;
+            }
+
+            .hero h1 {
+                font-size: clamp(1.8rem, 8vw, 2.5rem);
+            }
+
+            .nav-actions {
+                margin-left: auto;
+                margin-right: 1rem;
+                gap: 0.5rem;
             }
         }
 
@@ -1762,7 +1797,7 @@
     <!-- PIE DE PÁGINA -->
     <footer id="contacto">
         <div class="container">
-            <div class="footer-grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));">
+            <div class="footer-grid">
                 <div class="footer-col contact-card">
                     <div class="contact-links-left">
                         <a href="https://www.instagram.com/solargtvm/" target="_blank" class="footer-link">
