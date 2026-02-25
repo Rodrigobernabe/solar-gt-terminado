@@ -878,13 +878,27 @@
         }
 
         .contact-card {
-            background: linear-gradient(rgba(17, 24, 39, 0.85), rgba(17, 24, 39, 0.95)), url('local.jpg');
+            background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.7) 50%, rgba(0, 0, 0, 1) 100%), url('local.jpg');
             background-size: cover;
             background-position: center;
-            padding: 2.5rem;
+            padding: 2rem 2rem 0.1rem 2rem;
             border-radius: var(--border-radius);
             box-shadow: var(--shadow-md);
             border: 1px solid #374151;
+            width: 100%;
+            max-width: 560px;
+            height: 411px;
+            box-sizing: border-box;
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-between;
+        }
+
+        .contact-links-left,
+        .contact-links-right {
+            display: flex;
+            flex-direction: column;
+            gap: 0.1rem;
         }
 
         .footer-grid {
@@ -1750,12 +1764,7 @@
         <div class="container">
             <div class="footer-grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));">
                 <div class="footer-col contact-card">
-                    <a href="/" class="logo" style="margin-bottom: 1rem; display:block;">
-                        <img src="logo-dark.png" alt="Solar GT" class="footer-logo-img">
-                    </a>
-                    <p style="margin-bottom: 2rem;">Energía que impulsa el futuro.</p>
-
-                    <div class="footer-links">
+                    <div class="contact-links-left">
                         <a href="https://www.instagram.com/solargtvm/" target="_blank" class="footer-link">
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                                 stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -1772,6 +1781,9 @@
                             </svg>
                             Facebook
                         </a>
+                    </div>
+
+                    <div class="contact-links-right">
                         <a href="https://wa.me/5492657326148" target="_blank" class="footer-link">
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                                 stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
