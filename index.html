@@ -405,10 +405,7 @@
             margin-bottom: 1.5rem;
             font-weight: 800;
             text-transform: uppercase;
-            background: linear-gradient(to top, #FABD03, #EB6C17);
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
+            color: #ffffff;
             -webkit-text-stroke: 2px black;
         }
 
@@ -1549,45 +1546,53 @@
         <div class="container">
             <div class="about-grid" style="align-items: flex-start;">
                 <div class="about-text slide-out-left">
-                    <span class="section-tag">Sobre Nosotros</span>
-                    <h2 class="section-title">Quiénes Somos</h2>
-                    <p><strong>Solar GT</strong> es un equipo de profesionales especializados en energía que desarrolla
+                    <span class="section-tag" data-lang="about_tag">Sobre Nosotros</span>
+                    <h2 class="section-title" data-lang="about_title">Quiénes Somos</h2>
+                    <p data-lang="about_desc"><strong>Solar GT</strong> es un equipo de profesionales especializados en
+                        energía que desarrolla
                         soluciones solares innovadoras, pensadas para impulsar hoy la energía del futuro.</p>
 
                     <div style="margin-top: 2rem;">
                         <div style="margin-bottom: 1.5rem;">
-                            <h3 style="color: var(--color-primary); font-size: 1.25rem; margin-bottom: 0.5rem;">Misión
+                            <h3 style="color: var(--color-primary); font-size: 1.25rem; margin-bottom: 0.5rem;"
+                                data-lang="mission_title">Misión
                             </h3>
-                            <p style="font-size: 0.95rem;">Brindar soluciones integrales en energías solares
+                            <p style="font-size: 0.95rem;" data-lang="mission_desc">Brindar soluciones integrales en
+                                energías solares
                                 fotovoltaicas y térmicas, adaptadas a entornos rurales y urbanos, contribuyendo a la
                                 eficiencia energética y al desarrollo sustentable.</p>
                         </div>
 
                         <div style="margin-bottom: 1.5rem;">
-                            <h3 style="color: var(--color-primary); font-size: 1.25rem; margin-bottom: 0.5rem;">Visión
+                            <h3 style="color: var(--color-primary); font-size: 1.25rem; margin-bottom: 0.5rem;"
+                                data-lang="vision_title">Visión
                             </h3>
-                            <p style="font-size: 0.95rem;">Ser una empresa referente en servicios de energía solar en la
+                            <p style="font-size: 0.95rem;" data-lang="vision_desc">Ser una empresa referente en
+                                servicios de energía solar en la
                                 región, reconocida por su calidad técnica, innovación y confiabilidad.</p>
                         </div>
 
                         <h3 style="color: var(--color-primary); font-size: 1.25rem; margin-bottom: 1rem;">
-                            <span class="underline-accent">Nuestros Valores</span>
+                            <span class="underline-accent" data-lang="values_title">Nuestros Valores</span>
                         </h3>
                         <ul class="values-list">
                             <li style="margin-bottom: 1rem;">
-                                <strong style="color: var(--color-accent);">Transparencia Operativa:</strong> Diseñamos
-                                soluciones energéticas claras, viables y adaptadas a cada necesidad productiva.
-                                Asesoramos con información precisa y costos reales.
+                                <strong style="color: var(--color-accent);" data-lang="val1_title">Transparencia
+                                    Operativa:</strong><span data-lang="val1_desc"> Diseñamos
+                                    soluciones energéticas claras, viables y adaptadas a cada necesidad productiva.
+                                    Asesoramos con información precisa y costos reales.</span>
                             </li>
                             <li style="margin-bottom: 1rem;">
-                                <strong style="color: var(--color-accent);">Innovación Aplicada:</strong> Integramos
-                                tecnología solar de última generación y criterios de eficiencia energética para
-                                maximizar la rentabilidad.
+                                <strong style="color: var(--color-accent);" data-lang="val2_title">Innovación
+                                    Aplicada:</strong><span data-lang="val2_desc"> Integramos
+                                    tecnología solar de última generación y criterios de eficiencia energética para
+                                    maximizar la rentabilidad.</span>
                             </li>
                             <li>
-                                <strong style="color: var(--color-accent);">Calidad Certificada:</strong> Trabajamos con
-                                equipamiento homologado y procesos alineados a normativas vigentes, asegurando
-                                durabilidad y alto desempeño.
+                                <strong style="color: var(--color-accent);" data-lang="val3_title">Calidad
+                                    Certificada:</strong><span data-lang="val3_desc"> Trabajamos con
+                                    equipamiento homologado y procesos alineados a normativas vigentes, asegurando
+                                    durabilidad y alto desempeño.</span>
                             </li>
                         </ul>
                     </div>
@@ -1610,42 +1615,47 @@
 
         <div class="container" style="position: relative; z-index: 2;">
             <div class="text-center fade-in">
-                <span class="section-tag">Nuestros Pilares</span>
-                <h2 class="section-title">¿Por qué elegir Solar GT?</h2>
+                <span class="section-tag" data-lang="pillars_tag">Nuestros Pilares</span>
+                <h2 class="section-title" data-lang="pillars_title">¿Por qué elegir Solar GT?</h2>
             </div>
 
             <div class="values-grid">
                 <!-- Tarjeta 1: Experiencia -->
                 <article class="value-card slide-in-top" data-bg="bg-experience">
-                    <h3>Experiencia comprobada</h3>
-                    <p>Más de 8 años en el rubro y una amplia trayectoria en trabajos con energía solar.</p>
+                    <h3 data-lang="pil1_title">Experiencia comprobada</h3>
+                    <p data-lang="pil1_desc">Más de 8 años en el rubro y una amplia trayectoria en trabajos con energía
+                        solar.</p>
                 </article>
 
                 <!-- Tarjeta 2: Asesoramiento -->
                 <article class="value-card slide-in-top" data-bg="bg-advice">
-                    <h3>Asesoramiento Real</h3>
-                    <p>Elaboramos proyectos a la medida de nuestros clientes en forma transparente, buscando la mejor
+                    <h3 data-lang="pil2_title">Asesoramiento Real</h3>
+                    <p data-lang="pil2_desc">Elaboramos proyectos a la medida de nuestros clientes en forma
+                        transparente, buscando la mejor
                         eficiencia.</p>
                 </article>
 
                 <!-- Tarjeta 3: Instalación -->
                 <article class="value-card slide-in-top" data-bg="bg-install">
-                    <h3>Rápida instalación</h3>
-                    <p>Priorizamos los tiempos de instalación llevándolos al mínimo, entendiendo la importancia en la
+                    <h3 data-lang="pil3_title">Rápida instalación</h3>
+                    <p data-lang="pil3_desc">Priorizamos los tiempos de instalación llevándolos al mínimo, entendiendo
+                        la importancia en la
                         continuidad de los procesos.</p>
                 </article>
 
                 <!-- Tarjeta 4: Tecnología -->
                 <article class="value-card slide-in-bottom" data-bg="bg-tech">
-                    <h3>Tecnología avanzada</h3>
-                    <p>Utilizamos equipos de última generación para optimizar cada proyecto y estamos en constante
+                    <h3 data-lang="pil4_title">Tecnología avanzada</h3>
+                    <p data-lang="pil4_desc">Utilizamos equipos de última generación para optimizar cada proyecto y
+                        estamos en constante
                         actualización técnica.</p>
                 </article>
 
                 <!-- Tarjeta 5: Postventa -->
                 <article class="value-card slide-in-bottom" data-bg="bg-post-sale">
-                    <h3>Servicio Postventa</h3>
-                    <p>Procuramos brindar una solución estable y duradera en el tiempo, gestionando asesorías, garantías
+                    <h3 data-lang="pil5_title">Servicio Postventa</h3>
+                    <p data-lang="pil5_desc">Procuramos brindar una solución estable y duradera en el tiempo,
+                        gestionando asesorías, garantías
                         y reparaciones, manteniendo una relación cercana con nuestros clientes.</p>
                 </article>
             </div>
@@ -1656,8 +1666,8 @@
     <section id="servicios" class="section-padding services">
         <div class="container">
             <div class="text-center fade-in">
-                <span class="section-tag">Aplicaciones</span>
-                <h2 class="section-title">Soluciones para cada necesidad</h2>
+                <span class="section-tag" data-lang="apps_tag">Aplicaciones</span>
+                <h2 class="section-title" data-lang="apps_title">Soluciones para cada necesidad</h2>
             </div>
 
             <div class="services-grid">
@@ -1672,8 +1682,8 @@
 
                 <!-- 2. Sistemas Fotovoltaicos -->
                 <article class="service-card service-photovoltaic slide-in-left">
-                    <h3>Instalación de Paneles Solares (On Grid / Off Grid)</h3>
-                    <div class="service-special-content">
+                    <h3 data-lang="serv_photovoltaic_title">Instalación de Paneles Solares (On Grid / Off Grid)</h3>
+                    <div class="service-special-content" data-lang="serv_photovoltaic_desc">
                         <ul style="list-style-type: none; padding-left: 0;">
                             <li style="margin-bottom: 0.5rem;"><strong>• Sistemas Off Grid:</strong> Ideal para zonas
                                 sin red eléctrica o con cortes frecuentes.</li>
@@ -1696,8 +1706,9 @@
 
                 <!-- 4. Climatizadores de Piscinas -->
                 <article class="service-card service-pool-heater fade-in">
-                    <h3>Climatizadores de Piscinas</h3>
-                    <p>Son sistemas para elevar unos grados el agua de tu piscina y poder disfrutarla unos meses más.
+                    <h3 data-lang="serv_pool_title">Climatizadores de Piscinas</h3>
+                    <p data-lang="serv_pool_desc">Son sistemas para elevar unos grados el agua de tu piscina y poder
+                        disfrutarla unos meses más.
                         Ofrecemos distintas opciones según la necesidad del cliente, Bombas de Calor, Colectores de
                         tubos al vacío o Mantas de EPDM.</p>
                 </article>
@@ -1849,7 +1860,7 @@
                                 <line x1="8" y1="2" x2="8" y2="18"></line>
                                 <line x1="16" y1="6" x2="16" y2="22"></line>
                             </svg>
-                            Ver en Google Maps
+                            <span data-lang="footer_maps">Ver en Google Maps</span>
                         </a>
                     </div>
                 </div>
@@ -1865,7 +1876,7 @@
                 </div>
             </div>
             <div class="copyright">
-                <p>&copy; 2026 Solar GT. Todos los derechos reservados.</p>
+                <p data-lang="footer_copyright">&copy; 2026 Solar GT. Todos los derechos reservados.</p>
             </div>
         </div>
     </footer>
@@ -1974,33 +1985,67 @@
         const translations = {
             es: {
                 nav_home: "Inicio", nav_about: "Nosotros", nav_values: "Valores", nav_services: "Soluciones", nav_contact: "Contacto",
-                hero_title: "Solar GT, impulsando la transición energética",
+                hero_title: "Impulsando la transición energética",
                 hero_subtitle: "Empresa de energía solar, dedicada a dar soluciones fotovoltaicas y térmicas de alto rendimiento para el campo, la industria, el comercio y el hogar",
                 hero_cta1: "Ver Soluciones", hero_cta2: "Contacto",
                 counter_years: "Más de 8 años de experiencia", counter_projects: "Más de 65 proyectos terminados", counter_mwh: "Más de 90 KWh instalados", counter_clients: "100 % clientes satisfechos",
-                serv_heaters_title: "Calentadores Solares", serv_heaters_desc: "Sistemas de calentamiento de agua con energía solar para hogares y empresas, ahorrando gas y electricidad todo el año.",
-                serv_pumps_title: "Bombeo Solar", serv_pumps_desc: "Soluciones de bombeo de agua alimentadas por energía solar, ideales para agricultura, ganadería y zonas rurales.",
-                serv_storage_title: "Almacenamiento de Energía", serv_storage_desc: "Baterías de litio de última generación para almacenar energía y garantizar suministro continuo día y noche.",
-                serv_maintenance_title: "Mantenimiento", serv_maintenance_desc: "Servicio técnico especializado para mantener tus paneles y sistemas funcionando con máxima eficiencia.",
-                serv_consulting_title: "Asesoría Energética", serv_consulting_desc: "Análisis personalizado de consumo y diseño de sistemas solares adaptados a tus necesidades específicas.",
-                val_transparency_title: "Transparencia Operativa", val_transparency_desc: "Claridad total en cada etapa del proyecto. Desde el presupuesto inicial hasta la implementación, sin costos ocultos y con comunicación constante.",
-                val_innovation_title: "Innovación Aplicada", val_innovation_desc: "Utilizamos la última tecnología en paneles monocristalinos y sistemas de seguimiento para maximizar el rendimiento energético de cada instalación.",
-                val_quality_title: "Calidad Certificada", val_quality_desc: "Equipamiento homologado y cumplimiento estricto de normativas de seguridad. Garantizamos durabilidad y eficiencia a largo plazo."
+
+                about_tag: "Sobre Nosotros", about_title: "Quiénes Somos",
+                about_desc: "<strong>Solar GT</strong> es un equipo de profesionales especializados en energía que desarrolla soluciones solares innovadoras, pensadas para impulsar hoy la energía del futuro.",
+                mission_title: "Misión", mission_desc: "Brindar soluciones integrales en energías solares fotovoltaicas y térmicas, adaptadas a entornos rurales y urbanos, contribuyendo a la eficiencia energética y al desarrollo sustentable.",
+                vision_title: "Visión", vision_desc: "Ser una empresa referente en servicios de energía solar en la región, reconocida por su calidad técnica, innovación y confiabilidad.",
+                values_title: "Nuestros Valores",
+                val1_title: "Transparencia Operativa:", val1_desc: " Diseñamos soluciones energéticas claras, viables y adaptadas a cada necesidad productiva. Asesoramos con información precisa y costos reales.",
+                val2_title: "Innovación Aplicada:", val2_desc: " Integramos tecnología solar de última generación y criterios de eficiencia energética para maximizar la rentabilidad.",
+                val3_title: "Calidad Certificada:", val3_desc: " Trabajamos con equipamiento homologado y procesos alineados a normativas vigentes, asegurando durabilidad y alto desempeño.",
+
+                pillars_tag: "Nuestros Pilares", pillars_title: "¿Por qué elegir Solar GT?",
+                pil1_title: "Experiencia comprobada", pil1_desc: "Más de 8 años en el rubro y una amplia trayectoria en trabajos con energía solar.",
+                pil2_title: "Asesoramiento Real", pil2_desc: "Elaboramos proyectos a la medida de nuestros clientes en forma transparente, buscando la mejor eficiencia.",
+                pil3_title: "Rápida instalación", pil3_desc: "Priorizamos los tiempos de instalación llevándolos al mínimo, entendiendo la importancia en la continuidad de los procesos.",
+                pil4_title: "Tecnología avanzada", pil4_desc: "Utilizamos equipos de última generación para optimizar cada proyecto y estamos en constante actualización técnica.",
+                pil5_title: "Servicio Postventa", pil5_desc: "Procuramos brindar una solución estable y duradera en el tiempo, gestionando asesorías, garantías y reparaciones, manteniendo una relación cercana con nuestros clientes.",
+
+                apps_tag: "Aplicaciones", apps_title: "Soluciones para cada necesidad",
+                serv_pumps_title: "Instalación de Bombeo Solar para Agro", serv_pumps_desc: "Contamos con una amplia variedad de bombas solares, según caudal y profundidad requerida y la posibilidad de solarizar bombas que no son solares, cubriendo la necesidad de nuestros clientes, simplificando la extracción de agua de la manera más eficiente.",
+                serv_photovoltaic_title: "Instalación de Paneles Solares (On Grid / Off Grid)", serv_photovoltaic_desc: `<ul style="list-style-type: none; padding-left: 0;"><li style="margin-bottom: 0.5rem;"><strong>• Sistemas Off Grid:</strong> Ideal para zonas sin red eléctrica o con cortes frecuentes.</li><li style="margin-bottom: 0.5rem;"><strong>• Sistemas On Grid:</strong> Ahorro en tiempo real, sustituye energía de red por solar durante el día, con inyección a red.</li><li style="margin-bottom: 0.5rem;"><strong>• Sistemas Híbridos:</strong> La solución más completa, combina virtudes de Off Grid y On Grid.</li></ul><p style="margin-top: 1rem;">Te ofrecemos asesoramiento del sistema acorde a tu necesidad.</p>`,
+                serv_heaters_title: "Venta de Termotanques Solares", serv_heaters_desc: "Teniendo en cuenta los costos de calentar agua, el termotanque solar es la solución más óptima y versátil, no solo por el ahorro económico, sino también por la posibilidad de tener agua caliente en lugares remotos.",
+                serv_pool_title: "Climatizadores de Piscinas", serv_pool_desc: "Son sistemas para elevar unos grados el agua de tu piscina y poder disfrutarla unos meses más. Ofrecemos distintas opciones según la necesidad del cliente, Bombas de Calor, Colectores de tubos al vacío o Mantas de EPDM.",
+                serv_consulting_title: "Asesoría Personalizada", serv_consulting_desc: "Análisis personalizado de consumo y diseño de sistemas solares adaptados a tus necesidades específicas.",
+
+                footer_maps: "Ver en Google Maps", footer_copyright: "&copy; 2026 Solar GT. Todos los derechos reservados."
             },
             en: {
                 nav_home: "Home", nav_about: "About Us", nav_values: "Values", nav_services: "Solutions", nav_contact: "Contact",
-                hero_title: "Solar GT, powering the energy transition",
+                hero_title: "Powering the energy transition",
                 hero_subtitle: "Solar energy company, dedicated to providing high-performance photovoltaic and thermal solutions for the field, industry, commerce, and home",
-                hero_cta1: "View Solutions", hero_cta2: "Learn More",
-                counter_years: "Years of Experience", counter_projects: "Projects Completed", counter_mwh: "MWh Generated", counter_clients: "Satisfied Clients",
-                serv_heaters_title: "Solar Heaters", serv_heaters_desc: "Solar water heating systems for homes and businesses, saving gas and electricity all year round.",
-                serv_pumps_title: "Solar Pumping", serv_pumps_desc: "Solar-powered water pumping solutions, ideal for agriculture, livestock, and rural areas.",
-                serv_storage_title: "Energy Storage", serv_storage_desc: "Last-generation lithium batteries to store energy and ensure continuous supply day and night.",
-                serv_maintenance_title: "Maintenance", serv_maintenance_desc: "Specialized technical service to keep your panels and systems running at maximum efficiency.",
-                serv_consulting_title: "Energy Consulting", serv_consulting_desc: "Personalized consumption analysis and design of solar systems adapted to your specific needs.",
-                val_transparency_title: "Operational Transparency", val_transparency_desc: "Total clarity at every stage of the project. From the initial budget to implementation, with no hidden costs and constant communication.",
-                val_innovation_title: "Applied Innovation", val_innovation_desc: "We use the latest technology in monocrystalline panels and tracking systems to maximize the energy yield of every installation.",
-                val_quality_title: "Certified Quality", val_quality_desc: "Homologated equipment and strict compliance with safety regulations. We guarantee durability and efficiency in the long term."
+                hero_cta1: "View Solutions", hero_cta2: "Contact",
+                counter_years: "More than 8 years of experience", counter_projects: "More than 65 completed projects", counter_mwh: "More than 90 KWh installed", counter_clients: "100% satisfied clients",
+
+                about_tag: "About Us", about_title: "Who We Are",
+                about_desc: "<strong>Solar GT</strong> is a team of energy professionals developing innovative solar solutions, designed to power the energy of the future today.",
+                mission_title: "Mission", mission_desc: "Provide comprehensive photovoltaic and thermal solar energy solutions, adapted to rural and urban environments, contributing to energy efficiency and sustainable development.",
+                vision_title: "Vision", vision_desc: "To be a leading company in solar energy services in the region, recognized for its technical quality, innovation, and reliability.",
+                values_title: "Our Values",
+                val1_title: "Operational Transparency:", val1_desc: " We design clear, viable energy solutions adapted to each production need. We advise with accurate information and real costs.",
+                val2_title: "Applied Innovation:", val2_desc: " We integrate state-of-the-art solar technology and energy efficiency criteria to maximize profitability.",
+                val3_title: "Certified Quality:", val3_desc: " We work with approved equipment and processes aligned with current regulations, ensuring durability and high performance.",
+
+                pillars_tag: "Our Pillars", pillars_title: "Why choose Solar GT?",
+                pil1_title: "Proven Experience", pil1_desc: "More than 8 years in the field and an extensive track record in solar projects.",
+                pil2_title: "Real Advice", pil2_desc: "We develop tailored projects for our clients transparently, seeking the best efficiency.",
+                pil3_title: "Fast Installation", pil3_desc: "We prioritize minimizing installation times, understanding the importance of process continuity.",
+                pil4_title: "Advanced Technology", pil4_desc: "We use state-of-the-art equipment to optimize each project and are constantly updating our technical knowledge.",
+                pil5_title: "After-Sales Service", pil5_desc: "We strive to provide a stable and long-lasting solution, managing consulting, warranties, and repairs, maintaining a close relationship with our clients.",
+
+                apps_tag: "Applications", apps_title: "Solutions for every need",
+                serv_pumps_title: "Solar Pumping Installation for Agriculture", serv_pumps_desc: "We have a wide variety of solar pumps, depending on the required flow and depth, and the possibility of solarizing non-solar pumps, meeting our clients' needs and simplifying water extraction in the most efficient way.",
+                serv_photovoltaic_title: "Solar Panel Installation (On Grid / Off Grid)", serv_photovoltaic_desc: `<ul style="list-style-type: none; padding-left: 0;"><li style="margin-bottom: 0.5rem;"><strong>• Off Grid Systems:</strong> Ideal for areas without an electrical grid or with frequent outages.</li><li style="margin-bottom: 0.5rem;"><strong>• On Grid Systems:</strong> Real-time savings, replaces grid energy with solar during the day, with grid injection.</li><li style="margin-bottom: 0.5rem;"><strong>• Hybrid Systems:</strong> The most complete solution, combining the virtues of Off Grid and On Grid.</li></ul><p style="margin-top: 1rem;">We offer system advice according to your needs.</p>`,
+                serv_heaters_title: "Sale of Solar Water Heaters", serv_heaters_desc: "Considering water heating costs, the solar water heater is the most optimal and versatile solution, not only for economic savings, but also for the possibility of having hot water in remote locations.",
+                serv_pool_title: "Pool Heaters", serv_pool_desc: "Systems to raise your pool water temperature a few degrees and enjoy it a few more months. We offer different options according to the client's needs: Heat Pumps, Vacuum Tube Collectors, or EPDM Blankets.",
+                serv_consulting_title: "Personalized Advice", serv_consulting_desc: "Personalized consumption analysis and design of solar systems adapted to your specific needs.",
+
+                footer_maps: "View on Google Maps", footer_copyright: "&copy; 2026 Solar GT. All rights reserved."
             }
         };
 
@@ -2014,7 +2059,7 @@
             document.querySelectorAll('[data-lang]').forEach(el => {
                 const key = el.getAttribute('data-lang');
                 if (translations[currentLang][key]) {
-                    el.textContent = translations[currentLang][key];
+                    el.innerHTML = translations[currentLang][key];
                 }
             });
         }
