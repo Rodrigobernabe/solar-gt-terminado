@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://solargt.org/sitemap.xml
+Sitemap: https://solargt.energy/sitemap.xml
